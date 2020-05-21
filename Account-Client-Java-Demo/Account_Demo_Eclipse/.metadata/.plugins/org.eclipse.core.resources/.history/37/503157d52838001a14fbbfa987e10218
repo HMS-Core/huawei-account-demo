@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">hmssdk demo</string>
+    <string name="hw_id">HuaweiId</string>
+    <string name="hw_pay">HuaweiPay</string>
+    <string name="hw_push">HuaweiPUSH</string>
+    <string name="hw_sns">HuaweiSns</string>
+    <string name="hw_location">HuaweiLocation</string>
+    <string name="hw_opendevice">HuaweiOpendevice</string>
+    <string name="hw_safetydetect">safetydetect</string>
+    <string name="hw_ppskit">HuaweiPpskit</string>
+    <string name="hw_game">HuaweiGame</string>
+    <string name="desc_huawei_icon">Huawei Logo</string>
+    <string name="sample_description">Demo</string>
+    <string name="sample_hwid_description">Demo</string>
+
+    <string name="hwid_sign_in">getSignInIntent</string>
+    <string name="hwid_sign_out">signOut</string>
+    <string name="hwid_silentSignIn">silentSignIn</string>
+    <string name="hwid_revokeAccess">revokeAccess</string>
+
+    <string name="hwlocation_mockWarning">Enable the mobile phone to allow mock location \nand  set mockmode true</string>
+
+    <string name="hwsafetydetect_sysIntegrity">sysIntegrity</string>
+</resources>

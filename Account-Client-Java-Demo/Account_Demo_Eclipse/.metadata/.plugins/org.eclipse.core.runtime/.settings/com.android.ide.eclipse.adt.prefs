@@ -1,0 +1,7 @@
+com.android.ide.eclipse.adt.fixLegacyEditors=1
+com.android.ide.eclipse.adt.lintOnExport=false
+com.android.ide.eclipse.adt.lintOnSave=false
+com.android.ide.eclipse.adt.lintSeverities=MissingTranslation\=WARNING
+com.android.ide.eclipse.adt.sdk=D\:\\sdk
+com.android.ide.eclipse.adt.xmlEditor=true
+eclipse.preferences.version=1

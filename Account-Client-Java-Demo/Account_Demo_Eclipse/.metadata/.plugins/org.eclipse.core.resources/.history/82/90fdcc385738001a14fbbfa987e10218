@@ -1,0 +1,26 @@
+package com.huawei.logger;
+
+import android.app.FragmentTransaction;
+
+import com.huawei.hmssample.R;
+import com.huawei.hmssample.LogFragment;
+
+/**
+ * describe
+ *
+ * @author wwx773186
+ * @since 2019/8/27 18:37
+ */
+public class BaseActivity extends LoggerActivity  {
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    protected void addLogFragment() {
+        final FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        final LogFragment fragment = new LogFragment();
+        transaction.replace(R.id.framelog, fragment);
+        transaction.commit();
+    }
+}

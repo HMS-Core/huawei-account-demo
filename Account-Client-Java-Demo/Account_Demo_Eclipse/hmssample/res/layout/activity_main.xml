@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_title_margin"
+    android:paddingTop="@dimen/activity_title_margin"
+    android:paddingRight="@dimen/activity_title_margin"
+    android:paddingBottom="@dimen/activity_title_margin"
+    tools:context="com.huawei.hmssample.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:text="@string/sample_description" />
+
+    <Button
+        android:id="@+id/hw_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ButtonStyle"
+        android:text="@string/hw_id" />
+   
+</LinearLayout>

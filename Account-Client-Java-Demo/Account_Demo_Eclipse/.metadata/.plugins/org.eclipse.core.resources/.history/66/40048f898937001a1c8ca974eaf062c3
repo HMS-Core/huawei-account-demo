@@ -1,0 +1,5 @@
+package com.huawei.hmssample;
+
+public class IDTokenParser {
+
+}

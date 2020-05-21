@@ -1,0 +1,39 @@
+package com.huawei.hmssample;
+
+/**
+ * Request code
+ */
+public class Constant {
+    //appid
+    public final static String APPID = "101051449";
+    //Configuration whether to display log 1 display 0 not display logs
+    public static final int IS_LOG = 1;
+    //login
+    public static final int REQUEST_SIGN_IN_LOGIN = 1002;
+    //Not logged in to pull up Huawei account login page
+    public static final int REQ_CODE_NOT_LOGIN = 1003;
+    //Pull up the Payment Cashier
+    public static final int REQ_CODE_GO_PAY = 1004;
+    //Social Request
+    public static final int REQUEST_SEND_SNS_MSG = 1005;
+    //Start Huawei Message Service Interface
+    public static final int REQUEST_GET_UI_INTENT = 1006;
+    //User Authorization
+    public static final int REQUEST_SIGN_IN_AUTH = 1007;
+    //Pull up the Achievement List page
+    public static final int REQUEST_GAME_ACHIEVEMENTINTENT = 1008;
+    //Request Location Permission
+    public static final int REQUEST_LOCATION_PERMISSION = 1009;
+    
+    public static final String CLIENT_ID = "101090009";
+
+    /**
+     * JWK JSON Web Key endpoint, developer can get the JWK of the last two days from this endpoint
+     * See more about JWK in http://self-issued.info/docs/draft-ietf-jose-json-web-key.html
+     */
+    public static final String CERT_URL = "CERT_URL";
+    /**
+     *  Id Token issue
+     */
+    public static final String ID_TOKEN_ISSUE = "ID_TOKEN_ISSUE";
+}

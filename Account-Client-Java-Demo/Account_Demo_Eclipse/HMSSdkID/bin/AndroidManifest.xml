@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.huawei.android.hms.hwid" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="28" />
+
+    <application>
+        <activity
+            android:name="com.huawei.hms.hwid.internal.ui.activity.HwIdSignInHubActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+
+        <meta-data
+            android:name="com.huawei.hms.client.service.name:hwid"
+            android:value="hwid:4.0.1.300" />
+        <meta-data
+            android:name="com.huawei.hms.min_api_level:hwid:hwid"
+            android:value="1" />
+    </application>
+
+</manifest>

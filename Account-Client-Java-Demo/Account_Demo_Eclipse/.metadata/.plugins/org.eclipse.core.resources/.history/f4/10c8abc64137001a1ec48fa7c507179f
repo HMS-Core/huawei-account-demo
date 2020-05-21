@@ -1,0 +1,908 @@
+package com.huawei.hmssample;
+
+import android.app.Activity;
+import android.app.FragmentTransaction;
+import android.content.Context;
+import android.content.Intent;
+import android.content.res.AssetManager;
+import android.graphics.Bitmap;
+import android.graphics.Bitmap.CompressFormat;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffXfermode;
+import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ScrollView;
+import android.widget.Toast;
+
+import com.example.hmssample.R;
+import com.huawei.hmf.tasks.OnCompleteListener;
+import com.huawei.hmf.tasks.OnFailureListener;
+import com.huawei.hmf.tasks.OnSuccessListener;
+import com.huawei.hmf.tasks.Task;
+import com.huawei.hms.common.ApiException;
+import com.huawei.hms.support.api.entity.sns.Constants.UiIntentType;
+import com.huawei.hms.support.api.entity.sns.Group;
+import com.huawei.hms.support.api.entity.sns.GroupMem;
+import com.huawei.hms.support.api.entity.sns.SnsMsg;
+import com.huawei.hms.support.api.entity.sns.UnreadMsg;
+import com.huawei.hms.support.api.entity.sns.UserUnreadMsg;
+import com.huawei.hms.support.api.entity.sns.internal.AddFriendReq;
+import com.huawei.hms.support.api.entity.sns.internal.AddFriendResp;
+import com.huawei.hms.support.api.entity.sns.internal.FriendSelectorIntentReq;
+import com.huawei.hms.support.api.entity.sns.internal.GetContactSelectorIntentReq;
+import com.huawei.hms.support.api.entity.sns.internal.GetFriendListResp;
+import com.huawei.hms.support.api.entity.sns.internal.GetGroupListResp;
+import com.huawei.hms.support.api.entity.sns.internal.GetGroupMemListResp;
+import com.huawei.hms.support.api.entity.sns.internal.GetIMStatusResp;
+import com.huawei.hms.support.api.entity.sns.internal.GroupListReq;
+import com.huawei.hms.support.api.entity.sns.internal.GroupMemListReq;
+import com.huawei.hms.support.api.entity.sns.internal.GroupSelectorIntentReq;
+import com.huawei.hms.support.api.entity.sns.internal.SnsSendMsgIntentReq;
+import com.huawei.hms.support.api.entity.sns.internal.UiIntentReq;
+import com.huawei.hms.support.api.entity.sns.internal.UserDataReq;
+import com.huawei.hms.support.api.entity.sns.internal.UserDataResp;
+import com.huawei.hms.support.api.entity.sns.internal.UserSearchReq;
+import com.huawei.hms.support.api.entity.sns.internal.UserSearchResp;
+import com.huawei.hms.support.api.entity.sns.internal.UserUnreadMsgReq;
+import com.huawei.hms.support.api.entity.sns.json.SnsOutIntent;
+import com.huawei.hms.support.api.sns.json.Sns;
+import com.huawei.hms.support.api.sns.json.SnsClient;
+import com.huawei.hms.support.api.sns.json.SnsOptions;
+import com.huawei.hms.support.hwid.HuaweiIdAuthAPIManager;
+import com.huawei.hms.support.hwid.HuaweiIdAuthManager;
+import com.huawei.hms.support.hwid.request.HuaweiIdAuthParams;
+import com.huawei.hms.support.hwid.request.HuaweiIdAuthParamsHelper;
+import com.huawei.hms.support.hwid.result.AuthHuaweiId;
+import com.huawei.hms.support.hwid.result.HuaweiIdAuthResult;
+import com.huawei.hms.support.hwid.service.HuaweiIdAuthService;
+import com.huawei.logger.BaseActivity;
+import com.huawei.logger.Log;
+import com.huawei.logger.LoggerActivity;
+
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.List;
+
+/**
+ * Demonstration of Huawei Sns
+ */
+public class HuaweiSnsActivity extends BaseActivity implements OnClickListener {
+
+    public static final String TAG = "HuaweiSnsActivity";
+    boolean isPNG = false;
+    private HuaweiIdAuthService mHuaweiIdSignInClient;
+    private HuaweiIdAuthParams mSignInOptions;
+    private SnsClient mSnsClient;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_huaweisns);
+        // Button click listeners
+        findViewById(R.id.sns_sign).setOnClickListener(this);
+        findViewById(R.id.sns_start).setOnClickListener(this);
+        findViewById(R.id.sns_send_msg).setOnClickListener(this);
+        findViewById(R.id.sns_getfriendlist).setOnClickListener(this);
+        findViewById(R.id.sns_getfriendselectorIntent).setOnClickListener(this);
+        findViewById(R.id.sns_getgroupList).setOnClickListener(this);
+        findViewById(R.id.sns_getgroupmemList).setOnClickListener(this);
+        findViewById(R.id.sns_getuserdata).setOnClickListener(this);
+        findViewById(R.id.sns_getunreadmsgcount).setOnClickListener(this);
+        findViewById(R.id.sns_getusercount).setOnClickListener(this);
+        findViewById(R.id.sns_getgroupselectorintent).setOnClickListener(this);
+        findViewById(R.id.sns_getcontactselectorintent).setOnClickListener(this);
+        findViewById(R.id.sns_groupCreatorIntent).setOnClickListener(this);
+        findViewById(R.id.sns_addfriend).setOnClickListener(this);
+        findViewById(R.id.sns_search_user).setOnClickListener(this);
+        findViewById(R.id.sns_getimstatus).setOnClickListener(this);
+
+        //sample log Please ignore
+        addLogFragment();
+
+        //Initialize the HuaweiIdAuthService object by calling the getClient method of HuaweiIdAuthManager
+//        mSignInOptions = new HuaweiIdAuthParams.Builder(HuaweiIdAuthParams.DEFAULT_SIGN_IN).requestIdToken("").build();
+//        mHuaweiIdSignInClient = HuaweiIdAuthManager.getClient(HuaweiSnsActivity.this, mSignInOptions);
+//        //Initialize the SnsClient object by calling the getSnsClient method of Sns
+//        mSnsClient = Sns.getSnsClient(HuaweiSnsActivity.this, null);
+        
+        HuaweiIdAuthParamsHelper helper = new HuaweiIdAuthParamsHelper(HuaweiIdAuthParams.DEFAULT_AUTH_REQUEST_PARAM);
+        mSignInOptions = helper.setIdToken().createParams();
+        mSnsClient = Sns.getSnsClient(HuaweiSnsActivity.this, null);
+    }
+
+    /**
+     * Pull up the authorization interface by getSignInIntent
+     */
+    private void signIn() {
+        startActivityForResult(mHuaweiIdSignInClient.getSignInIntent(), Constant.REQUEST_SIGN_IN_LOGIN);
+    }
+
+
+    /**
+     * Start Huawei message page, According to the input UiIntentType.UI_MSG open different page
+     * UiIntentType.UI_MSG  Message page
+     * UiIntentType.UI_FRIEND  Contact page
+     * UiIntentType.UI_FAMILY_GROUP  Family group
+     * UiIntentType.UI_COMMON_GROUP Group chat group
+     * When Uiintenttype.ui_msg is one of the above 4 types, the last parameter of the Getuiintent interface is passed in 0
+     * UI_FAMILY_GROUP_DETAIL
+     * UI_COMMON_GROUP_DETAIL
+     * UI_CHAT_GROUP
+     * When Uiintenttype.ui_msg is one of the above 3 types, the last parameter of the Getuiintent interface is passed into the group's Huawei account ID
+     * UI_USER_DETAIL
+     * UI_CHAT_FRIEND
+     * UI_CHAT_ASSIST
+     * When Uiintenttype.ui_msg is one of the above 3 types, the last parameter of the Getuiintent interface is passed into the user's Huawei account ID
+     */
+    private void startSnsActivity() {
+        UiIntentReq uiIntentReq = new UiIntentReq();
+        uiIntentReq.setParam(0);
+        uiIntentReq.setType(UiIntentType.UI_FRIEND);
+        Task<SnsOutIntent> task = mSnsClient.getUiIntent(uiIntentReq, new SnsClient.Callback() {
+            @Override
+            public void notify(String result) {
+                Log.i(TAG, "startSns Callback  msg:" + result);
+            }
+        });
+        task.addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(Exception e) {
+                Log.i(TAG, "startSns onFailure msg:" + e.getMessage());
+                if (e instanceof ApiException) {
+                    Log.i(TAG, "startSns  onFailure errorCode:" + ((ApiException) e).getStatusCode());
+                }
+            }
+        }).addOnSuccessListener(new OnSuccessListener<SnsOutIntent>() {
+
+            @Override
+            public void onSuccess(SnsOutIntent snsOutIntent) {
+                Intent intent = snsOutIntent.getIntent();
+                startActivityForResult(intent, Constant.REQUEST_GET_UI_INTENT);
+                Log.i(TAG, "startSns Success");
+            }
+        }).addOnCompleteListener(new OnCompleteListener<SnsOutIntent>() {
+            @Override
+            public void onComplete(Task<SnsOutIntent> task) {
+
+            }
+        });
+    }
+
+    /**
+     * Must be in a specified format encapsulation social text message
+     * <p>
+     * Message service text message can be specified to open the message of the application,
+     * If not specified, The browser is used by default, Specified mode to set the following parameters:
+     * <p>
+     * TargetAppPackageName:Application package name
+     * TargetAppVersionCode:Application of the lowest version number
+     * TargetAppMarketId:
+     * Application in the Huawei application market download AppID,
+     * if the message receiver does not install the specified app or app version number does not meet the minimum version number requirements,
+     * then Huawei Mobile services will be applied to the market download specified application
+     * CheckTargetApp:
+     * To be detected is above three parameter specifies the application information, The default value is false.
+     * If this parameter is set to true, The message is to detect whether the receiver installation specified APP and APP version number
+     */
+    private SnsMsg createSnsMsg() {
+
+        SnsMsg snsMsg = new SnsMsg();
+        //Message AppName
+        snsMsg.setAppName("TestAppName");
+        snsMsg.setCheckTargetApp(false);
+        //Message headers
+        snsMsg.setTitle("TestMessageTitle");
+        //Message body
+        snsMsg.setDescription("TestMessageBody");
+        //Message clicking URL
+        snsMsg.setUrl("http://www.baidu.com");
+        //Message icon
+        //Message service text message icon need to transfer images binary data
+        //The size of the icon cannot exceed 30K
+        //The social graphics and text message interface only supports the square picture,
+        //if the picture is not the square picture, then will intercept, invites the developer to pay attention to handle
+        Bitmap bitmap = getImageFromAssetsFile();
+        snsMsg.setLinkIconData(bmpToByteArray(bitmap, 30));
+        Bitmap bitmap1 = getImageFromAssetsFile();
+        snsMsg.setAppIconData(bmpToByteArray(bitmap1, 4));
+
+        return snsMsg;
+    }
+
+    /**
+     * SendMessage
+     */
+    private void sendMessage() {
+        //Message Body
+        SnsMsg snsMsg = createSnsMsg();
+
+        SnsSendMsgIntentReq req = new SnsSendMsgIntentReq();
+        req.setSnsMsg(snsMsg);
+        req.setCallerPackageName(this.getPackageName());
+        //Whether the tag returns to the caller's interface or not
+        //the true post message interface automatically jumps to the caller's interface;
+        //the false post message stays in the social interface
+        req.setNeedResult(true);
+        Task<SnsOutIntent> task = mSnsClient.sendMsgIntent(req, new SnsClient.Callback() {
+            @Override
+            public void notify(String result) {
+
+            }
+        });
+        task.addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(Exception e) {
+                if (e instanceof ApiException) {
+                    Log.i(TAG, "sendMessage  onFailure errorCode:" + ((ApiException) e).getStatusCode());
+                }
+            }
+        }).addOnSuccessListener(new OnSuccessListener<SnsOutIntent>() {
+            @Override
+            public void onSuccess(SnsOutIntent snsOutIntent) {
+                if (snsOutIntent != null && snsOutIntent.getIntent() != null) {
+                    Intent intent = snsOutIntent.getIntent();
+                    startActivityForResult(intent, Constant.REQUEST_SEND_SNS_MSG);
+                    Log.i(TAG, "sendMessage Success");
+                }
+            }
+        });
+    }
+
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.sns_sign:
+                signIn();
+                break;
+            case R.id.sns_start:
+                startSnsActivity();
+                break;
+
+            case R.id.sns_send_msg:
+                sendMessage();
+                break;
+            case R.id.sns_getfriendlist:
+                getFriendList();
+                break;
+
+            case R.id.sns_getfriendselectorIntent:
+                getFriendSelectorIntent();
+                break;
+
+            case R.id.sns_getgroupList:
+                getGroupList();
+                break;
+
+            case R.id.sns_getgroupmemList:
+                getGoupmemList();
+                break;
+
+            case R.id.sns_getuserdata:
+                getUserdata();
+                break;
+
+            case R.id.sns_getunreadmsgcount:
+                getUnreadmsgcount();
+                break;
+            case R.id.sns_getusercount:
+                getUsercount();
+                break;
+            case R.id.sns_getgroupselectorintent:
+                getGroupselectorintent();
+                break;
+            case R.id.sns_getcontactselectorintent:
+                getContactselectorintent();
+                break;
+            case R.id.sns_groupCreatorIntent:
+                groupCreatorIntent();
+                break;
+            case R.id.sns_addfriend:
+                addFriend();
+                break;
+            case R.id.sns_search_user:
+                searchUser();
+                break;
+            case R.id.sns_getimstatus:
+                getImstatus();
+                break;
+            default:
+                break;
+        }
+    }
+
+    /**
+     * Get the Intent that opens the Friends Selector interface
+     */
+    private void getFriendSelectorIntent() {
+
+        FriendSelectorIntentReq friendSelectorIntentReq = new FriendSelectorIntentReq();
+        //singleChoice true Only a single user can be selected；false Multiple users can be selected
+        friendSelectorIntentReq.setSingleChoice(true);
+        Task<SnsOutIntent> friendSelectorIntent1 = mSnsClient.getFriendSelectorIntent(friendSelectorIntentReq, new SnsClient.Callback() {
+            @Override
+            public void notify(String result) {
+
+            }
+        });
+        friendSelectorIntent1.addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(Exception e) {
+                if (e instanceof ApiException) {
+                    Log.i(TAG, "getFriendSelectorIntent  onFailure errorCode:" + ((ApiException) e).getStatusCode());
+                }
+            }
+        }).addOnSuccessListener(new OnSuccessListener<SnsOutIntent>() {
+            @Override
+            public void onSuccess(SnsOutIntent snsOutIntent) {
+                if (snsOutIntent != null) {
+                    Intent intent = snsOutIntent.getIntent();
+                    if (intent != null) {
+                        startActivityForResult(intent, Constant.REQUEST_SEND_SNS_MSG);
+                    }
+                }
+            }
+        });
+    }
+
+    /**
+     * Access to social IM services online
+     */
+    private void getImstatus() {
+
+        Task<GetIMStatusResp> imStatus = mSnsClient.getIMStatus(new SnsClient.Callback() {
+            @Override
+            public void notify(String result) {
+
+            }
+        });
+
+        imStatus.addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(Exception e) {
+                if (e instanceof ApiException) {
+                    Log.i(TAG, "getImstatus  onFailure errorCode:" + ((ApiException) e).getStatusCode());
+                }
+            }
+        }).addOnSuccessListener(new OnSuccessListener<GetIMStatusResp>() {
+            @Override
+            public void onSuccess(GetIMStatusResp imStatusResult) {
+                if (imStatusResult != null) {
+                    Log.i(TAG, "imStatusResult========" + imStatusResult.getOnlineStatus());
+                } else {
+                    Log.i(TAG, "imStatusResult========null");
+                }
+            }
+        });
+    }
+
+    /**
+     * Find account ID
+     */
+    private void searchUser() {
+
+        UserSearchReq userSearchReq = new UserSearchReq();
+        //userAccount Huawei Account User Name, e.g. Email/Mobile Number
+        userSearchReq.setAccount("13841552687");
+        Task<UserSearchResp> userSearchResultTask = mSnsClient.searchUser(userSearchReq, new SnsClient.Callback() {
+            @Override
+            public void notify(String result) {
+                Log.i(TAG, "searchUser========" + result);
+            }
+        });
+        userSearchResultTask.addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(Exception e) {
+                if (e instanceof ApiException) {
+                    Log.i(TAG, "searchUser  onFailure errorCode:" + ((ApiException) e).getStatusCode());
+                }
+            }
+        }).addOnSuccessListener(new OnSuccessListener<UserSearchResp>() {
+            @Override
+            public void onSuccess(UserSearchResp userSearchResp) {
+                if (userSearchResp != null) {
+                    Log.i(TAG, "searchUser ========" + userSearchResp.toString());
+                } else {
+                    Log.i(TAG, "searchUser ========null");
+                }
+            }
+        });
+    }
+
+    /**
+     * Request to add social friends
+     */
+    private void addFriend() {
+        AddFriendReq addFriendReq = new AddFriendReq();
+        //Optional parameters, add a friend's comment message, such as: "Hello, I'm Xiaoming"
+        addFriendReq.setRemark("Hello, I'm Xiaoming");
+        //o add a friend's Huawei account ID
+        addFriendReq.setUserId(40086000000001437L);
+        Task<AddFriendResp> addFriendResultTask = mSnsClient.addFriend(addFriendReq, new SnsClient.Callback() {
+            @Override
+            public void notify(String result) {
+                Log.i(TAG, " addFriend   result:  === " + result);
+            }
+        });
+
+        addFriendResultTask.addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(Exception e) {
+                if (e instanceof ApiException) {
+                    Log.i(TAG, "addFriend  onFailure errorCode:" + ((ApiException) e).getStatusCode());
+                }
+            }
+        }).addOnSuccessListener(new OnSuccessListener<AddFriendResp>() {
+            @Override
+            public void onSuccess(AddFriendResp addFriendResp) {
+                if (addFriendResp != null) {
+                    Log.i(TAG, " addFriend   addFriendResp:  === " + addFriendResp.toString());
+                } else {
+                    Log.i(TAG, " addFriend   addFriendResp:  === null");
+                }
+            }
+        });
+    }
+
+    /**
+     * Getting Intent that opens the Family Group Creation Interface can be used to create a Family Group
+     */
+    private void groupCreatorIntent() {
+
+        Task<SnsOutIntent> groupCreatorIntent = mSnsClient.getGroupCreatorIntent(new SnsClient.Callback() {
+            @Override
+            public void notify(String result) {
+
+            }
+        });
+        groupCreatorIntent.addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(Exception e) {
+                if (e instanceof ApiException) {
+                    Log.i(TAG, "groupCreatorIntent  onFailure errorCode:" + ((ApiException) e).getStatusCode());
+                }
+            }
+        }).addOnSuccessListener(new OnSuccessListener<SnsOutIntent>() {
+            @Override
+            public void onSuccess(SnsOutIntent snsOutIntent) {
+                if (snsOutIntent != null) {
+                    Intent intent = snsOutIntent.getIntent();
+                    if (intent != null) {
+                        startActivityForResult(intent, Constant.REQUEST_SEND_SNS_MSG);
+                    }
+                }
+            }
+        });
+
+    }
+
+    /**
+     * Get the Intent that opens the address book selector interface
+     */
+    private void getContactselectorintent() {
+        GetContactSelectorIntentReq getContactSelectorIntentReq = new GetContactSelectorIntentReq();
+        //singleChoice true Only a single user can be selected；false Multiple users can be selected
+        getContactSelectorIntentReq.setSingleChoice(true);
+        Task<SnsOutIntent> contactSelectorIntent = mSnsClient.getContactSelectorIntent(getContactSelectorIntentReq, new SnsClient.Callback() {
+            @Override
+            public void notify(String result) {
+
+            }
+        });
+        contactSelectorIntent.addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(Exception e) {
+                if (e instanceof ApiException) {
+                    Log.i(TAG, "getContactselectorintent  onFailure errorCode:" + ((ApiException) e).getStatusCode());
+                }
+            }
+        }).addOnSuccessListener(new OnSuccessListener<SnsOutIntent>() {
+            @Override
+            public void onSuccess(SnsOutIntent snsOutIntent) {
+                if (snsOutIntent != null) {
+                    Intent intent = snsOutIntent.getIntent();
+                    if (intent != null) {
+                        startActivityForResult(intent, Constant.REQUEST_SEND_SNS_MSG);
+                    }
+                }
+            }
+        });
+    }
+
+    /**
+     *Gets the Intent that opens the group selector interface
+     */
+    private void getGroupselectorintent() {
+
+        GroupSelectorIntentReq groupSelectorIntentReq = new GroupSelectorIntentReq();
+        //groupType  FamilyGroups 0 CommonGroups 1 AllGroups 2
+        groupSelectorIntentReq.setGroupType(1);
+        Task<SnsOutIntent> groupSelectorIntent = mSnsClient.getGroupSelectorIntent(groupSelectorIntentReq, new SnsClient.Callback() {
+            @Override
+            public void notify(String result) {
+
+            }
+        });
+        groupSelectorIntent.addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(Exception e) {
+                if (e instanceof ApiException) {
+                    Log.i(TAG, "getGroupselectorintent  onFailure errorCode:" + ((ApiException) e).getStatusCode());
+                }
+            }
+        }).addOnSuccessListener(new OnSuccessListener<SnsOutIntent>() {
+                    @Override
+                    public void onSuccess(SnsOutIntent snsOutIntent) {
+                        if (snsOutIntent != null) {
+                            Intent intent = snsOutIntent.getIntent();
+                            if (intent != null) {
+                                startActivityForResult(intent, Constant.REQUEST_SEND_SNS_MSG);
+                            }
+                        }
+                    }
+                });
+    }
+
+    /**
+     * Gets the number of unread messages for a specified friend
+     */
+    private void getUsercount() {
+        UserUnreadMsgReq userUnreadMsgReq = new UserUnreadMsgReq();
+        //Friend ID
+        userUnreadMsgReq.setUserId(70086200300059399L);
+        Task<UserUnreadMsg> userCount = mSnsClient.getUserCount(userUnreadMsgReq, new SnsClient.Callback() {
+            @Override
+            public void notify(String result) {
+
+            }
+        });
+
+        userCount.addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(Exception e) {
+                Log.i(TAG, "getUsercount onFailure msg:" + e.getMessage());
+                if (e instanceof ApiException) {
+                    Log.i(TAG, "getUsercount  onFailure errorCode:" + ((ApiException) e).getStatusCode());
+                }
+            }
+        }).addOnSuccessListener(new OnSuccessListener<UserUnreadMsg>() {
+            @Override
+            public void onSuccess(UserUnreadMsg unreadMsg) {
+                if (unreadMsg != null) {
+                    Log.i(TAG, "getUsercount unreadMsg =====" + unreadMsg.getFriendMsg());
+                }
+            }
+        });
+    }
+
+    /**
+     * Get unread message information, including unread friends, number of group messages, unread friends, number of family invitations
+     */
+    private void getUnreadmsgcount() {
+        Task<UnreadMsg> unreadMsgCount = mSnsClient.getUnreadMsgCount(new SnsClient.Callback() {
+            @Override
+            public void notify(String result) {
+
+            }
+        });
+        unreadMsgCount.addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(Exception e) {
+                Log.i(TAG, "getUnreadmsgcount onFailure msg:" + e.getMessage());
+                if (e instanceof ApiException) {
+                    Log.i(TAG, "getUnreadmsgcount  onFailure errorCode:" + ((ApiException) e).getStatusCode());
+                }
+            }
+        }).addOnSuccessListener(new OnSuccessListener<UnreadMsg>() {
+            @Override
+            public void onSuccess(UnreadMsg unreadMsg) {
+                if (unreadMsg != null) {
+                    int friendMsg = unreadMsg.getFriendMsg();
+                    Log.i(TAG, "getUnreadmsgcount friendMsg =====" + friendMsg);
+                } else {
+                    Log.i(TAG, "getUnreadmsgcount unreadMsg =====null");
+                }
+            }
+        });
+
+    }
+
+    /**
+     * Get details of user information, including social information such as user nicknames, avatars, etc.
+     */
+    private void getUserdata() {
+        UserDataReq userDataReq = new UserDataReq();
+        //User's Huawei Account ID
+        userDataReq.setUserId(40086000000001437L);
+        Task<UserDataResp> userData1 = mSnsClient.getUserData(userDataReq, new SnsClient.Callback() {
+            @Override
+            public void notify(String result) {
+                Log.i(TAG, "getUserData ===== " + result);
+            }
+        });
+        userData1.addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(Exception e) {
+                Log.i(TAG, "getUserdata onFailure msg:" + e.getMessage());
+                if (e instanceof ApiException) {
+                    Log.i(TAG, "getUserdata  onFailure errorCode:" + ((ApiException) e).getStatusCode());
+                }
+            }
+        }).addOnSuccessListener(new OnSuccessListener<UserDataResp>() {
+            @Override
+            public void onSuccess(UserDataResp userDataResult) {
+                if (userDataResult != null) {
+                    Log.i(TAG, "userData Result" + userDataResult.getUserData().getAccount() + userDataResult.getUserData().getDisplayName() + "========userDataResult.getUserData().getDisplayName()");
+                } else {
+                    Log.i(TAG, "userData Result ===null");
+                }
+            }
+        });
+
+    }
+
+    /**
+     * Get a list of group members. Specify the group by the parameter {@code group Id}.
+     */
+    private void getGoupmemList() {
+        GroupMemListReq groupMemListReq = new GroupMemListReq();
+        //Huawei Account ID for Groups
+        groupMemListReq.setGroupId(210086000000010566L);
+        Task<GetGroupMemListResp> groupMemList = mSnsClient.getGroupMemList(groupMemListReq, new SnsClient.Callback() {
+            @Override
+            public void notify(String result) {
+
+            }
+        });
+        groupMemList.addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(Exception e) {
+                Log.i(TAG, "getGoupmemList onFailure msg:" + e.getMessage());
+                if (e instanceof ApiException) {
+                    Log.i(TAG, "getGoupmemList  onFailure errorCode:" + ((ApiException) e).getStatusCode());
+                }
+            }
+        }).addOnSuccessListener(new OnSuccessListener<GetGroupMemListResp>() {
+            @Override
+            public void onSuccess(GetGroupMemListResp groupMemListResult) {
+                if (groupMemListResult != null) {
+                    List<GroupMem> groupMemList1 = groupMemListResult.getGroupMemList();
+                    if (groupMemList1 != null) {
+                        Log.i(TAG, "groups size" + groupMemList1.size());
+                    }
+                } else {
+                    Log.i(TAG, "groupMemListResult === null");
+                }
+            }
+        });
+    }
+
+    /**
+     * Gets the local group list of the current user. According to the type of the incoming group,
+     * the list data of common group, family group or all groups are returned respectively.
+     */
+    private void getGroupList() {
+        GroupListReq groupListReq = new GroupListReq();
+        // FamilyGroups 0 CommonGroups 1 AllGroups 2
+        groupListReq.setGroupType(2);
+        Task<GetGroupListResp> groupList1 = mSnsClient.getGroupList(groupListReq, new SnsClient.Callback() {
+            @Override
+            public void notify(String result) {
+
+            }
+        });
+        groupList1.addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(Exception e) {
+                Log.i(TAG, "getGroupList onFailure msg:" + e.getMessage());
+                if (e instanceof ApiException) {
+                    Log.i(TAG, "getGroupList  onFailure errorCode:" + ((ApiException) e).getStatusCode());
+                }
+            }
+        }).addOnSuccessListener(new OnSuccessListener<GetGroupListResp>() {
+            @Override
+            public void onSuccess(GetGroupListResp groupListResult) {
+                if (groupListResult != null) {
+                    List<Group> groups = groupListResult.getGroups();
+                    if (groups != null) {
+                        Log.i(TAG, "getGroupList groups size" + groups.size());
+                    }
+                }
+            }
+        });
+    }
+
+    /**
+     * Invoke the message service to open the interface or send a message interface to return intent,
+     * the developer invokes the launch intent to authorize the login, and the result is returned via Onactivityresult
+     */
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == Constant.REQUEST_SIGN_IN_LOGIN) {
+            //login success
+            //get user message by getSignedInAccountFromIntent
+            Task<AuthHuaweiId> signInHuaweiIdTask = HuaweiIdAuthManager.parseAuthResultFromIntent(data);
+            if (signInHuaweiIdTask.isSuccessful()) {
+                AuthHuaweiId huaweiAccount = signInHuaweiIdTask.getResult();
+                Log.i(TAG, "login success ");
+            } else {
+                //login failed
+                Log.e(TAG, "login failed: " + ((ApiException) signInHuaweiIdTask.getException()).getStatusCode());
+            }
+        }
+
+
+        if (requestCode == Constant.REQUEST_SEND_SNS_MSG) {
+            if (resultCode == Activity.RESULT_OK) {
+                Log.i(TAG, "Send Message complete.");
+            } else {
+                Log.i(TAG, "User canceled.");
+            }
+        } else if (requestCode == Constant.REQUEST_GET_UI_INTENT) {
+        } else if (requestCode == Constant.REQUEST_SIGN_IN_AUTH) {
+            //If the return value is -1,  indicates that the user confirms the authorization
+            if (resultCode == Activity.RESULT_OK) {
+                Log.i(TAG, "User has authorized!");
+                HuaweiIdAuthResult result = HuaweiIdAuthAPIManager.HuaweiIdAuthAPIService.parseHuaweiIdFromIntent(data);
+                if (result == null) {
+                    return;
+                }
+                if (result.isSuccess()) {
+                    //Authorized success through RESULT.GETSIGNINHUAWEIID () to obtain Huawei account information
+                    Log.i(TAG, "User authorization successful, return account information");
+                } else {
+                    //Authorization failed with Result.getstatus () to get the cause of the error
+                    Log.i(TAG, "Failed authorization! Reason:" + result.getStatus().toString());
+                }
+            } else {
+                //Abnormal scenarios, Failed to invoke the interface
+                Log.i(TAG, "User not authorized!");
+            }
+        }
+
+    }
+
+    /**
+     * Sending text messages icon, Icon requirements is not greater than 30K, And in binary stream mode transfer
+     * Therefore, the method first bitmap object compression to 30K within, And into byte array
+     * @param bmp
+     * @param size  Picture size Unit KB
+     * @return
+     */
+    private byte[] bmpToByteArray(Bitmap bmp, int size) {
+        ByteArrayOutputStream output = new ByteArrayOutputStream();
+
+        if (isPNG) {
+            bmp = replaceTransparentWithWhite(bmp, this);
+            bmp.compress(CompressFormat.PNG, 100, output);
+        } else {
+            bmp.compress(CompressFormat.JPEG, 100, output);
+        }
+
+        int options = 100;
+        while (output.toByteArray().length > size * 1024) {
+            //Cyclic judging if compressed image is greater than 30kb, greater than continue to compression.
+            output.reset();
+            options -= 2;
+            if (options <= 0) {
+                break;
+            }
+            bmp.compress(CompressFormat.JPEG, options, output);
+        }
+
+        bmp.recycle();
+
+        byte[] result = output.toByteArray();
+        try {
+            output.close();
+        } catch (IOException e) {
+        }
+        return result;
+    }
+
+    /**
+     * PNG pictures in the transparent part replacement is white, This method needs to be around the PNG JPEG called before, Otherwise, invalid
+     * @param bitmap
+     * @param mContext
+     * @return
+     */
+    private Bitmap replaceTransparentWithWhite(Bitmap bitmap, Context mContext) {
+        Bitmap newBmp = bitmap.copy(Bitmap.Config.ARGB_8888, true);
+
+        Canvas canvas = new Canvas(newBmp);
+
+        Paint mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+
+        PorterDuffXfermode mode = new PorterDuffXfermode(PorterDuff.Mode.DST_OVER);
+
+        // Draw original bitmap to canvas
+        canvas.drawBitmap(bitmap, 0, 0, mPaint);
+
+        mPaint.setColor(Color.WHITE);
+        // Set the conversion mode
+        mPaint.setXfermode(mode);
+
+        int w = getScreenSize((Activity) mContext)[0] / 2 + bitmap.getWidth() / 2;
+        int h = getScreenSize((Activity) mContext)[1] / 2 + bitmap.getHeight() / 2;
+
+        // Draw white covers some
+        canvas.drawRect(0, 0, w, h, mPaint);
+
+        return newBmp;
+    }
+
+    /**
+     * Obtain the screen size
+     *
+     * @param activity Activity
+     * @return Screen size pixel value, The index is zero value is wide, The index is one value is high
+     */
+    private int[] getScreenSize(Activity activity) {
+        DisplayMetrics metrics = new DisplayMetrics();
+        activity.getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        return new int[]
+                {metrics.widthPixels, metrics.heightPixels};
+    }
+
+    /**
+     *The example code is simulated from asset read the image file in the folder, Used as message service of the image information,
+     *evelopers can according to the actual situation, Obtain the source of the image object
+     * @return
+     */
+    private Bitmap getImageFromAssetsFile() {
+        String fileName = "ic_launcher-web.png";
+
+        if (!fileName.substring(fileName.lastIndexOf("/") + 1).toUpperCase().contains("PNG")) {
+            isPNG = true;
+        } else {
+            isPNG = false;
+        }
+
+        Bitmap bitmap = null;
+        AssetManager am = getResources().getAssets();
+        try {
+            InputStream is = am.open(fileName);
+            bitmap = BitmapFactory.decodeStream(is);
+            is.close();
+        } catch (IOException e) {
+
+        }
+
+        return bitmap;
+    }
+    /**
+     * Get the current user's list of local friends
+     */
+    private void getFriendList() {
+        Task<GetFriendListResp> friendList = mSnsClient.getFriendList(new SnsClient.Callback() {
+            @Override
+            public void notify(String result) {
+
+            }
+        });
+        friendList.addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(Exception e) {
+                Log.i(TAG, "getFriendList onFailure msg:" + e.getMessage());
+                if (e instanceof ApiException) {
+                    Log.i(TAG, "getFriendList  onFailure errorCode:" + ((ApiException) e).getStatusCode());
+                }
+            }
+        }).addOnSuccessListener(new OnSuccessListener<GetFriendListResp>() {
+            @Override
+            public void onSuccess(GetFriendListResp getFriendListResp) {
+                if (getFriendListResp != null && getFriendListResp.getFriends() != null) {
+                    Log.i(TAG, "getFriendListResp size ===" + getFriendListResp.getFriends().size());
+                }
+            }
+        });
+    }
+}
