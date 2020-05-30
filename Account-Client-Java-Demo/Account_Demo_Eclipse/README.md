@@ -37,8 +37,8 @@ Please refer to the [Adding Project Dependencies section of the Integrated HMS S
 2. Right-click the project in Eclipse IDE and click Export.
     <img src="hmssample/images/export.png" alt="selectkeystore"/>
 3. Click **Next** to enter keystore selection interface.
-4. Select **Use existing keystore**， click **Browse**，select the **lightregion.jks** file in the your demo directory, and enter **android** in
-   the password input box.
+4. Select **Use existing keystore**， click **Browse**，select the **lightregion.jks** file in the your demo directory, and enter **android** in the password input box.
+
     <img src="hmssample/images/keystore.png" alt="selectkeystore"/>
 5. Select **Use existing Key**, select **androiddebugkey** in the Alias selection box, and enter **android** in the password box.
     <img src="hmssample/images/keystorealias.png" alt="keystorealias"/>
