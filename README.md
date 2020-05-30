@@ -30,7 +30,7 @@ CERT_URL:  Request CERT_URL to get public key's URL from jwks_uri, then get publ
 ID_TOKEN_ISSUE:  The value that ISS string of ID Token should be equal to.
 	
 ## Sample Code
-This demo provides demonstration for following scenarios:
+The Account-Server-Java-Demo provides demonstration for following scenarios:
 1. Authorization code to obtain Access Token.
 2. Verify the ID Token with public key. 
 3. Parsing Access Token.
