@@ -1,4 +1,4 @@
- huawei-account-demo
+# huawei-account-demo
 
 ## Table of Contents
 
@@ -47,6 +47,9 @@ The business logic of ID-Token Mode Sign In and Authorization Code Mode Sign In 
 
 ## Result
 The Account-Server-Java-Demo print the result of access token, jwt and content of access token.
+
+## Feedback
+Ask a question on [Stack Overflow](https://stackoverflow.com/questions/tagged/huawei-account) or the [HUAWEI Developer Forum](https://forums.developer.huawei.com/forumPortal/en/home?fid=0101187876626530001)
 
 ##  License
 Account-kit Android sample is licensed under the [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
