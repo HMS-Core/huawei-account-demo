@@ -46,7 +46,7 @@ This Account-Client-Java-Demo provides demonstration for following scenarios:
 The business logic of ID-Token Mode Sign In and Authorization Code Mode Sign In are implemented in HuaweiIdActivity.java while Id-Token verification are implemented in  IDTokenParse.java.
 
 ## Result
-The Account-Server-Java-Demo print the result of access token, jwt and the content of access token.
+The Account-Server-Java-Demo print the result of access token, jwt and content of access token.
 
 ##  License
 Account-kit Android sample is licensed under the [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
