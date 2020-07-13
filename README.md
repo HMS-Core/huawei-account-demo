@@ -1,4 +1,4 @@
-# huawei-account-demo
+# HUAWEI Account Demo
 
 ## Table of Contents
 
