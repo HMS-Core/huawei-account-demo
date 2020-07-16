@@ -35,18 +35,25 @@ ID_TOKEN_ISSUE:  The value that ISS string of ID Token should be equal to.
 1. Adding project dependencies.
 Please refer to the [Adding Project Dependencies section of the Integrated HMS SDK in the Eclipse IDE](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/account-preparation)
 2. Right-click the project in Eclipse IDE and click Export.
-    <img src="hmssample/images/export.png" alt="selectkeystore"/>
+
+<img src="hmssample/images/export.png" alt="selectkeystore"/>
+
 3. Click **Next** to enter keystore selection interface.
 4. Select **Use existing keystore**， click **Browse**，select the **lightregion.jks** file in the your demo directory, and enter **android** in the password input box.
 
-    <img src="hmssample/images/keystore.png" alt="selectkeystore"/>
+<img src="hmssample/images/keystore.png" alt="selectkeystore"/>
+
 5. Select **Use existing Key**, select **androiddebugkey** in the Alias selection box, and enter **android** in the password box.
-    <img src="hmssample/images/keystorealias.png" alt="keystorealias"/>
+
+<img src="hmssample/images/keystorealias.png" alt="keystorealias"/>
+
 6. Click **Browser**, select the APK export location, and click **Finish**.
-    <img src="hmssample/images/finish.png" alt="finish"/>
+
+<img src="hmssample/images/finish.png" alt="finish"/>
+
 7. Install and start the demo, you should be able to see the following page.
 
-    <img src="hmssample/images/demo.png" alt="mainpage" height="600"/>
+<img src="hmssample/images/demo.png" alt="mainpage" height="600"/>
 	
 	
 ## Sample Code
