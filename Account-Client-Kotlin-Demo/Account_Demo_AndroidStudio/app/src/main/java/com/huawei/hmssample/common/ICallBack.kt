@@ -13,20 +13,13 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package com.huawei.hmssample;
+package com.huawei.hmssample.common
 
 /**
- * Request code
+ * Call back
  */
-public class Constant {
-    public static final int IS_LOG = 1;
-    //login
-    public static final int REQUEST_SIGN_IN_LOGIN = 1002;
-    //login by code
-    public static final int REQUEST_SIGN_IN_LOGIN_CODE = 1003;
-
-    /**
-     * your app’s client ID,please replace it of yours
-     */
-    public static final String CLIENT_ID = "your app's client ID";
+interface ICallBack {
+    fun onSuccess()
+    fun onSuccess(result: String?)
+    fun onFailed()
 }

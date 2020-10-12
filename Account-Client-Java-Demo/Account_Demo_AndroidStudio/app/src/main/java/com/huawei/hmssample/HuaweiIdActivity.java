@@ -17,9 +17,7 @@ package com.huawei.hmssample;
 
 import android.app.FragmentTransaction;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
 
@@ -32,7 +30,6 @@ import com.huawei.hms.support.hwid.request.HuaweiIdAuthParams;
 import com.huawei.hms.support.hwid.request.HuaweiIdAuthParamsHelper;
 import com.huawei.hms.support.hwid.result.AuthHuaweiId;
 import com.huawei.hms.support.hwid.service.HuaweiIdAuthService;
-import com.huawei.hmssample.common.ICallBack;
 import com.huawei.logger.Log;
 import com.huawei.logger.LoggerActivity;
 
@@ -101,53 +98,19 @@ public class HuaweiIdActivity extends LoggerActivity implements OnClickListener 
      * sign Out by signOut
      */
     private void signOut() {
-        Task<Void> signOutTask = mAuthManager.signOut();
-        signOutTask.addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void aVoid) {
-                Log.i(TAG, "signOut Success");
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(Exception e) {
-                Log.i(TAG, "signOut fail");
-            }
-        });
-    }
-
-    private void validateIdToken(String idToken) {
-        if (TextUtils.isEmpty(idToken)) {
-            Log.i(TAG, "ID Token is empty");
-        } else {
-            IDTokenParser idTokenParser = new IDTokenParser();
-            try {
-                idTokenParser.verify(idToken, new ICallBack() {
-                    @Override
-                    public void onSuccess() {
-                    }
-
-                    @Override
-                    public void onSuccess(String idTokenJsonStr) {
-                        if (!TextUtils.isEmpty(idTokenJsonStr)) {
-                            Log.i(TAG, "id Token Validate Success, verify signature: " + idTokenJsonStr);
-                        } else {
-                            Log.i(TAG, "Id token validate failed.");
-                        }
-                    }
-
-                    @Override
-                    public void onFailed() {
-                        Log.i(TAG, "Id token validate failed.");
-                    }
-                });
-            } catch (Exception e) {
-                Log.i(TAG, "id Token validate failed." + e.getClass().getSimpleName());
-            } catch (Error e) {
-                Log.i(TAG, "id Token validate failed." + e.getClass().getSimpleName());
-                if (Build.VERSION.SDK_INT < 23) {
-                    Log.i(TAG, "android SDK Version is not support. Current version is: " + Build.VERSION.SDK_INT);
+	   if (null != mAuthManager) {
+            Task<Void> signOutTask = mAuthManager.signOut();
+            signOutTask.addOnSuccessListener(new OnSuccessListener<Void>() {
+                @Override
+                public void onSuccess(Void aVoid) {
+                    Log.i(TAG, "signOut Success");
                 }
-            }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(Exception e) {
+                    Log.i(TAG, "signOut fail");
+                }
+            });
         }
     }
 
@@ -204,7 +167,6 @@ public class HuaweiIdActivity extends LoggerActivity implements OnClickListener 
                 AuthHuaweiId huaweiAccount = authHuaweiIdTask.getResult();
                 Log.i(TAG, huaweiAccount.getDisplayName() + " signIn success ");
                 Log.i(TAG,"AccessToken: " + huaweiAccount.getAccessToken());
-                validateIdToken(huaweiAccount.getIdToken());
             } else {
                 Log.i(TAG, "signIn failed: " + ((ApiException) authHuaweiIdTask.getException()).getStatusCode());
             }
