@@ -45,7 +45,7 @@ public class GetTokenInfoAPIDemo {
 
     public static void main(String[] args) throws IOException {
         //common parameters
-        String urlScope = "https://api.cloud.huawei.com/rest.php";
+        String urlScope = "https://oauth-api.cloud.huawei.com/rest.php";
 
         //<please update> access token which server have got.
         String accessToken = "CV4e6lKIn6xJiO9Nz1xIqWj8FY0DYmt/wiPXGJbvlDrBq4hOWlFbygdDoMg0htDm0LdlPIrRwAihXFGADOMkddmzhiE01R+99Y71hx/yfzuDb5njDT9bDg==";
