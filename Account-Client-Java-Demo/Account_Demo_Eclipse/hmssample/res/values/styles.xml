@@ -21,7 +21,7 @@
         <item name="android:windowMinWidthMajor">100%</item>
         <item name="android:windowMinWidthMinor">100%</item>
     </style>
-    <!--按钮样式 -->
+    <!--Button Style -->
     <style name="ButtonStyle" parent="@android:style/Widget.Button">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -32,7 +32,7 @@
         <item name="android:textSize">14sp</item>
     </style>
 
-    <!--title样式 -->
+    <!--title Style -->
     <style name="TitleStyle" parent="@android:style/Widget.TextView">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -40,14 +40,14 @@
         <item name="android:layout_marginBottom">10dp</item>
         <item name="android:textSize">16sp</item>
     </style>
-    <!--输入框样式 -->
+    <!--Text box style -->
     <style name="EditTextStyle" parent="@android:style/Widget.EditText">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginBottom">10dp</item>
         <item name="android:textSize">14sp</item>
     </style>
-    <!--提示样式 -->
+    <!--Prompt Style -->
     <style name="WarningStyle" parent="@android:style/Widget.TextView">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>

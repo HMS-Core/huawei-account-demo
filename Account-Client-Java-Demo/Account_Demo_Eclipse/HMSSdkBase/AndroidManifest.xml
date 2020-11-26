@@ -6,30 +6,30 @@
         android:minSdkVersion="17"
         android:targetSdkVersion="26" />
 
-    <!-- HMS-SDK引导升级HMS功能，访问OTA服务器需要网络权限 -->
+    <!-- To upgrade the HMS using HMS-SDK, you need the network permission to access the OTA server. -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <!-- HMS-SDK引导升级HMS功能，保存下载的升级包需要SD卡写权限 -->
+    <!-- When the HMS-SDK boots the HMS upgrade function, the write permission on the SD card is required for saving the downloaded upgrade package. -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <!-- 检测网络状态 -->
+    <!-- Check the network status. -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <!-- 检测wifi状态 -->
+    <!-- Check the Wi-Fi status. -->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <!-- 如果是安卓8.0，应用编译配置的targetSdkVersion>=26，请务必添加以下权限 -->
+    <!-- For Android 8.0, if targetSdkVersion is set to 26 or later, add the following permissions -->
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
-    <!-- 应用市场9.0版本必须使用该权限获取用户的服务地 -->
+    <!-- AppGallery 9.0 must use this permission to obtain users' service locations. -->
     <uses-permission android:name="com.huawei.appmarket.service.commondata.permission.GET_COMMON_DATA" />
 
     <application>
 
         <!--
-        为后续统计第三方app集成了哪些Kit，因此需要Kit在自己的AndroidManifest.xml文件中定义业务标签元数据，
-        流水线打包时会替换成HMSVER对应的版本号，不要手动修改
+        To collect statistics on kits integrated by third-party apps, the kit needs to define service tag metadata in its AndroidManifest.xml file,
+        The pipeline will replace the version number with the HMSVER version number during packaging. Do not manually change the version number.
         -->
         <meta-data
             android:name="com.huawei.hms.client.service.name:base"
             android:value="base:3.0.0.100" />
 
-        <!-- SDK依赖的HMSCore的最低api level元数据 -->
+        <!-- Minimum API level metadata of HMSCore on which the SDK depends -->
         <meta-data
             android:name="com.huawei.hms.min_api_level:base:hmscore"
             android:value="1" />
