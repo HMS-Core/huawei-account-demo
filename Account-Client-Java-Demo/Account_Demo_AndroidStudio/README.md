@@ -4,8 +4,8 @@
 ## Table of Contents
 
  * [Introduction](#introduction)
- * [Getting Started](#getting-started)
  * [Supported Environments](#supported-environments)
+ * [Getting Started](#getting-started)
  * [Result](#result)
  * [License](#license)
 
@@ -14,7 +14,7 @@
     Android sample code encapsulates APIs of the HUAWEI Account Kit server. It provides sample program for your reference or usage.
     The following describes of Android sample code.
 
-    hmssample:    Sample code packages. This package  contains code that implements Sign,  SignInCode and SignOut.
+    hmssample:    Sample code packages. This package  contains code that implements Sign, SignInCode, SilentSignIn, SignOut and CancelAuthorization.
     logger:       This packages contains code that implements logger View.
 
 	
@@ -35,12 +35,15 @@
    6. Run the sample on your Android device or emulator.
 
  
-##  Result
+## Result
     This demo provides demonstration for following scenarios:
-    1. ID-Token Mode Sign In.  Sign in and Id-Token verification are both included.
+    1. ID-Token Mode Sign In. 
     2. Authorization Code Mode Sign In. 
-    3. Sign out.
+	3. Silent Sign In.
+    4. Sign out.
+	5. Cancel Authorization.
 ![account sample result](images/account_sample_result.jpg)
 
-##  License
+
+## License
     Account-kit Android sample is licensed under the [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0).

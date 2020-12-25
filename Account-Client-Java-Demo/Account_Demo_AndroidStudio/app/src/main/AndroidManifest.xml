@@ -3,8 +3,6 @@
     package="com.huawei.hmssample">
     <!--HMS-SDK need network permission while check if upgrade is neccessary-->
     <uses-permission android:name="android.permission.INTERNET" />
-    <!--HMS-SDK need network permission while hms is upgrading-->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <!--chek network permissions-->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <!--check wifi state-->
@@ -13,13 +11,6 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <!--if your app is running above android 8.0 and use "targetSdkVersion>=26, need add permission -->
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
-    <!-- running after lock screen -->
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <!-- get the location detail -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <!-- get the general location -->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
 
 
     <application
@@ -29,17 +20,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-
-        <!--<activity android:name=".MainActivity">-->
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
-
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
-        <!--</activity>-->
-        <!--HuaweiId-->
         <activity
-            android:name=".HuaweiIdActivity"
+            android:name=".AccountActivity"
             android:configChanges="orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

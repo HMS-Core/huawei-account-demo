@@ -18,6 +18,7 @@ package com.huawei.logger;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.util.AttributeSet;
@@ -25,6 +26,7 @@ import android.widget.TextView;
 
 import com.huawei.logger.Log.LogNode;
 
+@SuppressLint("AppCompatCustomView")
 public class LogView extends TextView implements LogNode {
 
     private LogNode mNext;
