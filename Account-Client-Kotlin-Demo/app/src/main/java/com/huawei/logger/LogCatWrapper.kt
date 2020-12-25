@@ -16,7 +16,7 @@
 package com.huawei.logger
 
 /**
- * Function Description
+ * 功能描述
  *
  * @since 2020-08-27
  */

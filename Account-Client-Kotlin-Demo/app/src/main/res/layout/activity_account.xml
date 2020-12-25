@@ -10,29 +10,39 @@
         android:paddingLeft="@dimen/activity_title_margin"
         android:paddingTop="@dimen/activity_title_margin"
         android:paddingRight="@dimen/activity_title_margin"
-        tools:context="com.huawei.hmssample.HuaweiIdActivity">
+        tools:context="com.huawei.hmssample.AccountActivity">
 
         <TextView
-            android:text="@string/sample_hwid_description"
+            android:text="@string/sample_account_description"
             style="@style/TitleStyle"
             />
 
 
         <Button
-            android:id="@+id/hwid_signin"
+            android:id="@+id/account_signin"
             style="@style/ButtonStyle"
-            android:text="@string/hwid_sign_in" />
+            android:text="@string/sign_in" />
 
         <Button
-            android:id="@+id/hwid_signInCode"
+            android:id="@+id/account_signInCode"
             style="@style/ButtonStyle"
-            android:text="@string/hwid_revokeAccess" />
+            android:text="@string/revokeAccess" />
 
 
         <Button
-            android:id="@+id/hwid_signout"
+            android:id="@+id/account_silent_signin"
             style="@style/ButtonStyle"
-            android:text="@string/hwid_sign_out" />
+            android:text="@string/silent_sign_in" />
+
+        <Button
+            android:id="@+id/account_signout"
+            style="@style/ButtonStyle"
+            android:text="@string/sign_out" />
+
+        <Button
+            android:id="@+id/cancel_authorization"
+            style="@style/ButtonStyle"
+            android:text="@string/cancel_authorization" />
 
         <FrameLayout
             android:id="@+id/framelog"
