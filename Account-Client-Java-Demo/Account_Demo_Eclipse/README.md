@@ -1,5 +1,6 @@
 ﻿## Accountkit-Android-sample
 
+English | [中文](https://github.com/HMS-Core/huawei-account-demo/blob/master/Account-Client-Java-Demo/Account_Demo_Eclipse/README_ZH.md) 
 
 ## Table of Contents
 

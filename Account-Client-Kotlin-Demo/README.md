@@ -1,5 +1,6 @@
 ﻿# Accountkit-Android-sample
 
+English | [中文](https://github.com/HMS-Core/huawei-account-demo/blob/master/Account-Client-Kotlin-Demo/README_ZH.md) 
 
 ## Table of Contents
 
