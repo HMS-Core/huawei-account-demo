@@ -53,7 +53,7 @@ dependencies {
     implementation fileTree(include: ['*.jar',], dir: 'libs')
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation "com.google.code.gson:gson:2.8.5"
-    implementation 'com.huawei.hms:hwid:5.1.1.300'
+    implementation 'com.huawei.hms:hwid:5.2.0.300'
 }
 
 repositories { flatDir { dirs '../aars' } }
