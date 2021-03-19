@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">hmssample</string>
+    <string name="sample_description">Account Kit Demo</string>
+    <string name="sample_account_description">Account Usage Process</string>
+    <string name="sign_in">ID-Token Mode Signln</string>
+    <string name="sign_out">SignOut</string>
+    <string name="revokeAccess">AuthorizationCode Mode Signln</string>
+    <string name="silent_sign_in">Silent SignIn</string>
+    <string name="cancel_authorization">Cancel Authorization</string>
+
+</resources>

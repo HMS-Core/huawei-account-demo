@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">hmssdk demo</string>
+    <string name="hw_id">HuaweiId</string>
+
+    <string name="sample_description">Demo</string>
+    <string name="sample_hwid_description">Demo</string>
+
+    <string name="hwid_sign_in">ID-Token Mode Signln</string>
+    <string name="hwid_sign_out">SignOut</string>
+    <string name="hwid_revokeAccess">AuthorizationCode Mode Signln</string>
+
+    <string name="hwlocation_mockWarning">Enable the mobile phone to allow mock location \nand  set mockmode true</string>
+
+    <string name="hwsafetydetect_sysIntegrity">sysIntegrity</string>
+</resources>

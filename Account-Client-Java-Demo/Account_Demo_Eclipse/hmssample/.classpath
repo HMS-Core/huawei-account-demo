@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="lib" path="libs/android-support-v4.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/commons-codec-1.9.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/commons-io-2.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/gson-2.8.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/guava-19.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/jackson-annotations-2.9.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/jackson-core-2.9.9.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/jackson-databind-2.9.9.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/java-jwt-3.8.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/jwks-rsa-0.4.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/okhttp-3.9.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/okio-1.13.0.jar"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>
