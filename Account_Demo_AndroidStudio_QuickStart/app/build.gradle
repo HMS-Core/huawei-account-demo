@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.huawei.agconnect'
+android {
+
+    signingConfigs {
+        buildTypes {
+            release {
+                minifyEnabled false
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+                debuggable true
+            }
+            debug {
+                debuggable true
+            }
+        }
+
+        compileSdkVersion 29
+        buildToolsVersion "29.0.3"
+        defaultConfig {
+            applicationId "com.huawei.hms.accountsample"
+            minSdkVersion 19
+            targetSdkVersion 28
+            versionCode 1
+            versionName "1.0"
+            testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        }
+        lintOptions {
+            abortOnError false
+        }
+
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+
+        sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
+        config {
+            keyAlias '***'
+            storeFile file('****')
+            storePassword '***'
+            keyPassword '***'
+        }
+    }
+
+    dependencies {
+        ext.JUNIT_VERSION = '4.12'
+        ext.ESPRESSO_VERSION = '2.2.2'
+
+        implementation fileTree(include: ['*.jar',], dir: 'libs')
+        implementation 'androidx.appcompat:appcompat:1.2.0'
+        implementation "com.google.code.gson:gson:2.8.5"
+        implementation 'com.huawei.hms:hwid:5.2.0.300'
+        implementation 'com.huawei.hms:hianalytics:5.0.5.301'
+    }
+
+    repositories { flatDir { dirs '../aars' } }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.config
+        }
+        release {
+            signingConfig signingConfigs.config
+        }
+    }
+}

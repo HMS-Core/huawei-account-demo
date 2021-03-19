@@ -1,0 +1,61 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_title_margin"
+        android:paddingTop="@dimen/activity_title_top_margin"
+        android:paddingRight="@dimen/activity_title_margin"
+        tools:context=".AccountActivity">
+
+        <ImageView
+            android:id="@+id/imageshow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/accountname"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+
+        <com.huawei.hms.support.hwid.ui.HuaweiIdAuthButton
+            android:id="@+id/huaweiId"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp" />
+
+        <Button
+            android:id="@+id/account_silent_signin"
+            style="@style/ButtonStyle"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="@string/silent_sign_in" />
+
+        <Button
+            android:id="@+id/cancel_authorization"
+            style="@style/ButtonStyle"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel_authorization" />
+
+        <FrameLayout
+            android:id="@+id/framelog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp">
+        </FrameLayout>
+
+        <TextView
+            style="@style/TitleStyle"
+            android:text="@string/sample_account_description" />
+
+    </LinearLayout>
+
+</ScrollView>

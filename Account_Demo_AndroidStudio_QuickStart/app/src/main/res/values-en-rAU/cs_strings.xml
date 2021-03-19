@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">AccountDemo</string>
+    <string name="sample_description">Account Kit Demo</string>
+    <string name="sample_account_description">Account Usage Process(Double Click to Clear)</string>
+    <string name="silent_sign_in">Silent SignIn</string>
+    <string name="cancel_authorization">Cancel Authorization</string>
+</resources>
