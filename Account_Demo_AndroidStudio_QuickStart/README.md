@@ -1,5 +1,7 @@
 # Accountkit-Android-sample
 
+English | [中文](https://github.com/HMS-Core/huawei-account-demo/blob/quickstart/Account_Demo_AndroidStudio_QuickStart/README_ZH.md) 
+
 
 ## Table of Contents
 
@@ -14,7 +16,7 @@
 Android sample code encapsulates APIs of the HUAWEI Account Kit server. It provides sample program for your reference or usage.
 The following describes of Android sample code.
 
-hmssample:    Sample code packages. This package  contains code that implements Sign, SignInCode, SilentSignIn, SignOut and CancelAuthorization.
+accountsample:    Sample code packages. This package  contains code that implements Sign, SilentSignIn, and CancelAuthorization.
 logger:       This packages contains code that implements logger View.
 
 	
@@ -37,13 +39,11 @@ Android SDK Version >= 23 and JDK version >= 1.8 is recommended.
  
 ## Result
 This demo provides demonstration for following scenarios:
-1. ID-Token Mode Sign In. 
-2. Authorization Code Mode Sign In. 
-3. Silent Sign In.
-4. Sign out.
-5. Cancel Authorization.
+1. Sign In. 
+2. Silent Sign In.
+3. Cancel Authorization.
 
-![account sample result](images/account_sample_result.jpg)
+![account sample result](images/account_quickstart.JPG)
 
 
 ## License
