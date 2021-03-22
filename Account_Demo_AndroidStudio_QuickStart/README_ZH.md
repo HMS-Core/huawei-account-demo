@@ -10,7 +10,7 @@
 * [授权许可](#授权许可)
 
 ## 简介
-Android示例代码对华为帐号服务（HUAWEI Account Kit）的客户端接口进行封装，包含丰富的示例程序，方便您参考或直接使用。详情如下：
+Android QuickStart示例代码对华为帐号服务（HUAWEI Account Kit）的客户端接口进行封装，包含丰富的示例程序，方便您参考或直接使用。详情如下：
 
 accountsample：示例代码包，可实现华为帐号登录、静默登录和帐号取消授权功能。
 logger：可实现日志记录。
@@ -35,6 +35,9 @@ logger：可实现日志记录。
 3. 取消授权。
 
 ![image.png](images/account_quickstart.JPG)
+
+请使用浏览器扫描以下二维码进行安装体验：
+![image.png](images/demo_download.jpg)
 
 ## 授权许可
 华为帐号服务Android示例代码经过[Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)授权许可。

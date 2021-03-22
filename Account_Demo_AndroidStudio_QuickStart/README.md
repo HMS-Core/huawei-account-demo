@@ -13,7 +13,7 @@ English | [中文](https://github.com/HMS-Core/huawei-account-demo/blob/quicksta
 
  
 ## Introduction
-Android sample code encapsulates APIs of the HUAWEI Account Kit server. It provides sample program for your reference or usage.
+Android QuickStart sample code encapsulates APIs of the HUAWEI Account Kit server. It provides sample program for your reference or usage.
 The following describes of Android sample code.
 
 accountsample:    Sample code packages. This package  contains code that implements Sign, SilentSignIn, and CancelAuthorization.
@@ -45,6 +45,8 @@ This demo provides demonstration for following scenarios:
 
 ![account sample result](images/account_quickstart.JPG)
 
+Please use your browser to scan the following QR code for installation：
+![image.png](images/demo_download.jpg)
 
 ## License
 Account-kit Android sample is licensed under the [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
