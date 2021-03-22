@@ -37,6 +37,7 @@ logger：可实现日志记录。
 ![image.png](images/account_quickstart.JPG)
 
 请使用浏览器扫描以下二维码进行安装体验：
+
 ![image.png](images/demo_download.jpg)
 
 ## 授权许可

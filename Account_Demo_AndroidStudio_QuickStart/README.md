@@ -46,6 +46,7 @@ This demo provides demonstration for following scenarios:
 ![account sample result](images/account_quickstart.JPG)
 
 Please use your browser to scan the following QR code for installation：
+
 ![image.png](images/demo_download.jpg)
 
 ## License
