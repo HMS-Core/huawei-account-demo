@@ -1,6 +1,6 @@
 # 华为帐号服务示例代码
 
-中文 | [English](https://github.com/HMS-Core/huawei-account-demo/blob/master/README.md) 
+中文 | [English](https://github.com/HMS-Core/huawei-account-demo/blob/android_quickstart_scenarios/README.md) 
 
 ## 目录
 * [简介](#简介)

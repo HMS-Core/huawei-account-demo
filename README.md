@@ -1,6 +1,6 @@
 # HUAWEI Account Demo
 
-English | [中文](https://github.com/HMS-Core/huawei-account-demo/blob/master/README_ZH.md) 
+English | [中文](https://github.com/HMS-Core/huawei-account-demo/blob/android_quickstart_scenarios/README_ZH.md) 
 
 
 ## Table of Contents
