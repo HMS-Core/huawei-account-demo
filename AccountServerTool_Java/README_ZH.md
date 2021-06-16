@@ -1,6 +1,6 @@
 # 华为帐号服务accountservertool示例代码
 
-中文 | [English](https://github.com/HMS-Core/huawei-account-demo/blob/master/Account-Client-Java-Demo/Account_Demo_AndroidStudio/README.md) 
+中文 | [English](https://github.com/HMS-Core/huawei-account-demo/blob/Java_accountservertool/AccountServerTool_Java/README.md) 
 
 ## 目录
 * [简介](#简介)

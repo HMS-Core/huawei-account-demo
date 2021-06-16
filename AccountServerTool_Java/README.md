@@ -1,6 +1,6 @@
 # accountservertool sample
 
-English | [中文](https://github.com/HMS-Core/huawei-account-demo/blob/master/Account-Client-Java-Demo/Account_Demo_AndroidStudio/README_ZH.md) 
+English | [中文](https://github.com/HMS-Core/huawei-account-demo/blob/Java_accountservertool/AccountServerTool_Java/README_ZH.md) 
 
 
 ## Table of Contents
