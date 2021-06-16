@@ -1,6 +1,6 @@
 # 移动与智慧屏应用场景化接入华为帐号示例代码
 
-中文 | [English](https://github.com/HMS-Core/huawei-account-demo/blob/android_code_scenarios/README.md) 
+中文 | [English](https://github.com/HMS-Core/huawei-account-demo/blob/android_scenarios_demo/README.md) 
 
 ## 目录
 * [简介](#简介)
