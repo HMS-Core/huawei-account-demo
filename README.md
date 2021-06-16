@@ -1,6 +1,6 @@
 # Sample Code for Scenario-based Access to Huawei IDs for Mobile and Smart Screen Applications
 
-English | [Chinese](https://github.com/HMS-Core/huawei-account-demo/blob/android_code_scenarios/README_ZH.md)
+English | [Chinese](https://github.com/HMS-Core/huawei-account-demo/blob/android_scenarios_demo/README_ZH.md)
 
 ## Directory
 
