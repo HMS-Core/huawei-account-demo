@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">快速接入Demo</string>
+    <string name="sign_out">帐号退出</string>
+    <string name="cancel_authorization">取消授权</string>
+</resources>

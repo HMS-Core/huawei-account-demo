@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Quick Start Demo</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="cancel_authorization">Cancel Authorization</string>
+</resources>
