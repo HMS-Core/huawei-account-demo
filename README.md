@@ -1,68 +1,44 @@
-# HUAWEI Account Demo
+# Sample Code for Scenario-based Access to Huawei IDs for Mobile and Smart Screen Applications
 
-English | [中文](https://github.com/HMS-Core/huawei-account-demo/blob/master/README_ZH.md) 
+Chinese | [English](https://github.com/HMS-Core/huawei-account-demo/blob/android_code_scenarios/README.md)
 
+## Directory
+* [Introduction] (#Introduction)
+* [Install] (#Install)
+* [Environment requirements] (#Environment requirements)
+*[Configure](#Configure)
+* [Sample Code](#Sample Code)
+* [Running Result](#Running Result)
+* [license] (#license)
 
-## Table of Contents
-
- * [Introduction](#introduction)
- * [Installation](#installation)
- * [Configurations](#configurations)
- * [Supported Environments](#supported-environments)
- * [Sample Code](#sample-code)
- * [Result](#result)
- * [License](#license)
- 
- 
 ## Introduction
-Android sample code encapsulates APIs of the HUAWEI Account Kit server. It provides sample program for your reference or usage.
-The following describes of Android sample code.
+This section provides code examples for using common APIs of HUAWEI Account Kit in this scenario. The details are as follows:
+Sample code package, which implements login, silent login, silent login failure processing, code obtaining, account logout, and authorization cancellation functions.
 
-hmssample: Sample code packages. This package  contains code that implements Sign,  SignInCode and SignOut.
-logger: This packages contains code that implements logger View.
-    
+##Installation
+To use the functions in this sample code, ensure that Huawei Mobile Service (HMS Core) 5.0 has been installed on your device.
 
-## Installation
-To use functions provided by examples, please make sure Huawei Mobile Service 4.0 has been installed on your cellphone.
-## Supported Environments
-Android SDK Version >= 23 and JDK version >= 1.8 is recommended.
-	
-## Configurations  
-The following describes parameters in Contant.java
-CLIENT_ID:  App ID, which can be obtained from AppGallery Connect website, please replace it with your app's client ID.
-CERT_URL:  Request CERT_URL to get public key's URL from jwks_uri, then get public key.
-ID_TOKEN_ISSUE:  The value that ISS string of ID Token should be equal to.
-	
+##Environment Requirements
+Android SDK 23 or later and JDK 1.8 or later are recommended.
+
+##Configure
+
 ## Sample Code
-The Account-Server-Java-Demo provides demonstration for following scenarios:
-1. Authorization code to obtain Access Token.
-2. Verify the ID Token with public key. 
-3. Parsing Access Token.
+Android Application Scenario-based Access to Huawei ID Sample Code Client Java Sample Code provides the following application scenarios:
+1. Quickly access Huawei ID using mobile and smart screen apps.
+2. Access Huawei IDs in server-free ID-Token mode for mobile and smart screens.
+3. Mobile and smart screen apps can access Huawei IDs in server ID-token mode.
+4. Access the Huawei ID in Code mode on the mobile and smart screens.
 
-The business logic of obtain Access Token is implemented in TokenAPIDemo.java, Verify the ID Token is implemented in IDTokenAPIDemo.java, and Parse Access Token is implemented in GetTokenInfoAPIDemo.java.
+## Running result
+In the sample code, after you click Huawei ID Login, the Huawei ID login authorization page is displayed. After you click Logout, the cache is cleared. After you click Cancel Authorization, the application authorization is canceled.
 
-This Account-Client-Java-Demo provides demonstration for following scenarios:
-1. ID-Token Mode Sign In.
-2. Authorization Code Mode Sign In.
-3. Silent Sign In
-4. Sign Out.
-5. Cancel Authorization.
+## More Details
+To learn more about the HMS Core, visit the [Reddit](https://www.reddit.com/r/HuaweiDevelopers/) community to obtain the latest HMS Core news and participate in the developer discussion.
+If you have questions about using the sample code, go to:
+* [Stack Overflow] (https://stackoverflow.com/questions/tagged/huawei-mobile-services). When uploading a question, attach the huawei-mobile-services tag.
+* [Huawei Developer Forum] (https://developer.huawei.com/consumer/cn/forum/block/hms-core) for more comments and suggestions.
+If an error occurs when you run the sample code, submit a [issue](https://github.com/HMS-Core/huawei-account-demo/issues) or [pull request](https://github.com/HMS-Core/huawei-account-demo/pulls) on GitHub.
 
-The service logic of ID-Token Mode Sign In and Authorization Code Mode Sign In are implemented in AccountActivity.java.
-
-## Result
-The Account-Server-Java-Demo print the result of access token, jwt and content of access token.
-
-## Question or issues
-If you want to evaluate more about HMS Core,
-[r/HMSCore on Reddit](https://www.reddit.com/r/HuaweiDevelopers/) is for you to keep up with latest news about HMS Core, and to exchange insights with other developers.
-
-If you have questions about how to use HMS samples, try the following options:
-- [Stack Overflow](https://stackoverflow.com/questions/tagged/huawei-mobile-services) is the best place for any programming questions. Be sure to tag your question with 
-`huawei-mobile-services`.
-- [Huawei Developer Forum](https://forums.developer.huawei.com/forumPortal/en/home?fid=0101187876626530001) HMS Core Module is great for general questions, or seeking recommendations and opinions.
-
-If you run into a bug in our samples, please submit an [issue](https://github.com/HMS-Core/huawei-account-demo/issues) to the Repository. Even better you can submit a [Pull Request](https://github.com/HMS-Core/huawei-account-demo/pulls) with a fix.
-
-##  License
-Account-kit Android sample is licensed under the [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+## Licensing
+The sample code for scenario-based access to Huawei IDs for mobile and smart screens is authorized by [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0).
