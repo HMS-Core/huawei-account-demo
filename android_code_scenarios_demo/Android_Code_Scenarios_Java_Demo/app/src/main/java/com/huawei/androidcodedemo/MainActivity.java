@@ -96,13 +96,13 @@ public class MainActivity extends AppCompatActivity {
 		// 1、配置登录请求参数AccountAuthParams，包括请求用户的id(openid、unionid)、email、profile(昵称、头像)等;
 		// 2、DEFAULT_AUTH_REQUEST_PARAM默认包含了id和profile（昵称、头像）的请求;
 		// 3、如需要再获取用户邮箱，需要setEmail();
-		// 4、如需要获取其他受限信息，如手机号、国家和地区，则需要先申请scope，再设置请求参数；
+		// 4、如需要获取其他受限信息，如手机号，则需要先申请scope，再设置请求参数；
 		// 5、通过setAuthorizationCode()来选择使用code模式，最终所有请求的用户信息都可以调服务器的接口获取；
 		// 1. Configure the login request parameters AccountAuthParams, including the requested user id (openid, unionid),
 		// email, profile (nickname, avatar), etc.
 		// 2. DEFAULT_AUTH_REQUEST_PARAM includes requests for id and profile (nickname, avatar) by default.
 		// 3. If you need to get the user mailbox again, you need setEmail();
-		// 4. If you need to obtain other restricted information, such as mobile phone, countries and regions, you need to apply for scope first,
+		// 4. If you need to obtain other restricted information, such as mobile phone, you need to apply for scope first,
 		// and then set the request parameters.
 		// 5. Select the code mode through setAuthorizationCode(), and finally all requested user information can be obtained by calling the server's interface;
 		mAuthParam = new AccountAuthParamsHelper(AccountAuthParams.DEFAULT_AUTH_REQUEST_PARAM)
