@@ -1,0 +1,886 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1f031e90-8e96-4f25-a6fa-2a1072b86ab3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/README_ZH.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/app/agconnect-services.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/app/src/androidTest/java/com/huawei/quickstartdemo/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/app/src/main/java/com/huawei/quickstartdemo/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/app/src/main/res/values-night/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/app/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/app/src/test/java/com/huawei/quickstartdemo/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android_QuickStart_Scenarios_Demo/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README_ZH.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tash" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/hms/account/idtoken/IdTokenUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1593">
+              <caret line="73" column="38" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/hms/account/IdTokenDemo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/hms/account/code/bean/ErrorInfos.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/hms/account/code/bean/TokensEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/hms/account/code/AuthCodeUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1485">
+              <caret line="69" column="7" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/hms/account/AuthCodeDemo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="864">
+              <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#6974#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/hms/account/code/bean/UserInfos.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/hms/account/code/bean/ResponseInfos.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/hms/account/code/Constants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/hms/account/code/bean/AccessTokenInfos.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="22" column="29" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/TokensEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/AccessTokenInfos.java" />
+        <option value="$PROJECT_DIR$/src/main/java/AuthCodeTools.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/huawei/hms/account/code/UserInfos.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/huawei/hms/account/code/AuthCodeTools.java" />
+        <option value="$PROJECT_DIR$/src/test/java/IdTokenToolTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/huawei/hms/account/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/huawei/hms/account/code/TokensManager.java" />
+        <option value="$PROJECT_DIR$/src/test/java/AccessTokenToolTest.java" />
+        <option value="$PROJECT_DIR$/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/huawei/hms/account/idtoken/IdTokenTool.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/huawei/hms/account/code/AuthCodeTool.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/huawei/hms/account/code/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/huawei/hms/account/code/CodeDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/huawei/hms/account/code/AuthCodeDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/huawei/hms/account/IDTokenDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/huawei/hms/account/ErrorCodes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/huawei/hms/account/Constants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/huawei/hms/account/code/bean/AccessTokenInfos.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/huawei/hms/account/code/bean/ErrorInfos.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/huawei/hms/account/code/bean/ResponseInfos.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/huawei/hms/account/code/bean/TokensEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/huawei/hms/account/code/bean/UserInfos.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/huawei/hms/account/code/Constants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/huawei/hms/account/idtoken/IdTokenUtil.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/huawei/hms/account/AuthCodeDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/huawei/hms/account/IdTokenDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/huawei/hms/account/code/AuthCodeUtil.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\MavenRepo" />
+        <option name="userSettingsFile" value="D:\work\HMS\code\ApkScan\HMSSupporting\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="AccountServerTool_Java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AccountServerTool_Java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AccountServerTool_Java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AccountServerTool_Java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AccountServerTool_Java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AccountServerTool_Java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AccountServerTool_Java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AccountServerTool_Java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AccountServerTool_Java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AccountServerTool_Java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="account" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AccountServerTool_Java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AccountServerTool_Java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="account" type="462c0819:PsiDirectoryNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AccountServerTool_Java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AccountServerTool_Java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="account" type="462c0819:PsiDirectoryNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AccountServerTool_Java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AccountServerTool_Java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="account" type="462c0819:PsiDirectoryNode" />
+              <item name="idtoken" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1623226997385" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\work\Account\Code\accountservertool" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\work\Account\Code\accountservertool\src\main\java\com\huawei\hms\account\code" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.AuthCodeDemo">
+    <configuration name="AuthCodeDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.huawei.hms.account.AuthCodeDemo" />
+      <module name="accountservertool" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.huawei.hms.account.code.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IdTokenDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.huawei.hms.account.IdTokenDemo" />
+      <module name="accountservertool" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.huawei.hms.account.code.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AccessTokenToolTest.getUserInfosByAccessToken" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="accountservertool" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AccessTokenToolTest" />
+      <option name="METHOD_NAME" value="getUserInfosByAccessToken" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AccessTokenToolTest.parseAccessTokenTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="accountservertool" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AccessTokenToolTest" />
+      <option name="METHOD_NAME" value="parseAccessTokenTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IdTokenToolTest.getUserInfosByIdTokenTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="accountservertool" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="IdTokenToolTest" />
+      <option name="METHOD_NAME" value="getUserInfosByIdTokenTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.AuthCodeDemo" />
+        <item itemvalue="Application.IdTokenDemo" />
+        <item itemvalue="JUnit.AccessTokenToolTest.getUserInfosByAccessToken" />
+        <item itemvalue="JUnit.AccessTokenToolTest.parseAccessTokenTest" />
+        <item itemvalue="JUnit.IdTokenToolTest.getUserInfosByIdTokenTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1f031e90-8e96-4f25-a6fa-2a1072b86ab3" name="Default Changelist" comment="" />
+      <created>1618881167917</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1618881167917</updated>
+      <workItem from="1618881170864" duration="59245000" />
+      <workItem from="1619337794375" duration="3869000" />
+      <workItem from="1619597062414" duration="16251000" />
+      <workItem from="1620351336925" duration="6985000" />
+      <workItem from="1621238102010" duration="86755000" />
+      <workItem from="1621818500727" duration="14236000" />
+      <workItem from="1622082040855" duration="31405000" />
+      <workItem from="1622425643563" duration="721000" />
+      <workItem from="1622447877537" duration="2812000" />
+      <workItem from="1623226921457" duration="669000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="IdTokenToolTest_getUserInfosByIdTokenTest - 2021.04.21 at 15h 53m 04s.xml">
+      <configuration name="IdTokenToolTest.getUserInfosByIdTokenTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IdTokenToolTest_getUserInfosByIdTokenTest - 2021.04.21 at 15h 59m 20s.xml">
+      <configuration name="IdTokenToolTest.getUserInfosByIdTokenTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IdTokenToolTest_getUserInfosByIdTokenTest - 2021.04.21 at 15h 59m 31s.xml">
+      <configuration name="IdTokenToolTest.getUserInfosByIdTokenTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IdTokenToolTest_getUserInfosByIdTokenTest - 2021.04.21 at 16h 03m 19s.xml">
+      <configuration name="IdTokenToolTest.getUserInfosByIdTokenTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IdTokenToolTest_getUserInfosByIdTokenTest - 2021.04.21 at 16h 03m 25s.xml">
+      <configuration name="IdTokenToolTest.getUserInfosByIdTokenTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IdTokenToolTest_getUserInfosByIdTokenTest - 2021.04.21 at 16h 04m 04s.xml">
+      <configuration name="IdTokenToolTest.getUserInfosByIdTokenTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IdTokenToolTest_getUserInfosByIdTokenTest - 2021.04.21 at 16h 04m 24s.xml">
+      <configuration name="IdTokenToolTest.getUserInfosByIdTokenTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IdTokenToolTest_getUserInfosByIdTokenTest - 2021.04.21 at 20h 54m 50s.xml">
+      <configuration name="IdTokenToolTest.getUserInfosByIdTokenTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AccessTokenToolTest_parseAccessTokenTest - 2021.04.29 at 16h 59m 01s.xml">
+      <configuration name="AccessTokenToolTest.parseAccessTokenTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AccessTokenToolTest_getUserInfosByAccessToken - 2021.04.29 at 16h 59m 54s.xml">
+      <configuration name="AccessTokenToolTest.getUserInfosByAccessToken" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="222948000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="7" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26599148" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2340195" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.37053087" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.23618636" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32936078" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.1971831" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.081023455" />
+      <window_info anchor="right" id="PlantUML" order="4" />
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Samples" order="7" weight="0.17324094" />
+      <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="right" id="Palette&#9;" order="9" />
+      <window_info anchor="right" id="Theme Preview" order="10" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>decoder.getKeyId()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://D:/MavenRepo/org/apache/httpcomponents/httpcore/4.4.11/httpcore-4.4.11.jar!/org/apache/http/entity/StringEntity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="52" column="11" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/Date.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="883" column="16" selection-start-line="883" selection-start-column="16" selection-end-line="883" selection-end-column="16" />
+          <folding>
+            <element signature="e#37718#37719#0" expanded="true" />
+            <element signature="e#37754#37755#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/MavenRepo/com/auth0/java-jwt/3.8.1/java-jwt-3.8.1.jar!/com/auth0/jwt/exceptions/JWTVerificationException.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/MavenRepo/com/auth0/java-jwt/3.8.1/java-jwt-3.8.1.jar!/com/auth0/jwt/JWTVerifier.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="48" column="21" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/MavenRepo/junit/junit/4.13/junit-4.13.jar!/org/junit/runners/model/FrameworkMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <element signature="e#1059#1252#0" expanded="true" />
+            <element signature="e#1251#1252#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/MavenRepo/com/auth0/java-jwt/3.8.1/java-jwt-3.8.1.jar!/com/auth0/jwt/algorithms/RSAAlgorithm.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/MavenRepo/com/auth0/java-jwt/3.8.1/java-jwt-3.8.1.jar!/com/auth0/jwt/JWTDecoder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+          <folding>
+            <element signature="e#1763#1764#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/MavenRepo/org/apache/httpcomponents/httpclient/4.5.9/httpclient-4.5.9.jar!/org/apache/http/impl/client/HttpClients.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#541#542#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/MavenRepo/org/apache/httpcomponents/httpclient/4.5.9/httpclient-4.5.9.jar!/org/apache/http/impl/client/HttpClientBuilder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="485" selection-start-line="485" selection-end-line="485" />
+          <folding>
+            <element signature="e#6971#6972#0" expanded="true" />
+            <element signature="e#7017#7018#0" expanded="true" />
+            <element signature="e#7054#7055#0" expanded="true" />
+            <element signature="e#7121#7122#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/MavenRepo/org/apache/httpcomponents/httpcore/4.4.11/httpcore-4.4.11.jar!/org/apache/http/util/Args.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/MavenRepo/org/apache/httpcomponents/httpclient/4.5.9/httpclient-4.5.9.jar!/org/apache/http/conn/util/PublicSuffixMatcherLoader.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/hms/account/code/bean/qq.java" />
+    <entry file="jar://D:/MavenRepo/org/apache/httpcomponents/httpclient/4.5.9/httpclient-4.5.9.jar!/org/apache/http/conn/util/PublicSuffixListParser.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1539">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/MavenRepo/org/apache/httpcomponents/httpclient/4.5.9/httpclient-4.5.9.jar!/org/apache/http/impl/client/CloseableHttpClient.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1053">
+          <caret line="60" column="33" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/MavenRepo/junit/junit/4.13/junit-4.13.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/MavenRepo/junit/junit/4.13/junit-4.13.jar!/org/junit/runners/ParentRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5994">
+          <caret line="289" selection-start-line="289" selection-end-line="289" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/hms/account/code/TokensManager.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/hms/account/Main.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/IdTokenToolTest.java" />
+    <entry file="jar://D:/MavenRepo/junit/junit/4.13/junit-4.13.jar!/org/junit/runner/JUnitCore.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1458">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/MavenRepo/junit/junit/4.13/junit-4.13.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/AccessTokenToolTest.java" />
+    <entry file="jar://D:/MavenRepo/org/apache/httpcomponents/httpcore/4.4.11/httpcore-4.4.11.jar!/org/apache/http/util/EntityUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4692" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README_ZH.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="270">
+            <caret line="10" selection-start-line="10" selection-end-line="10" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/MavenRepo/commons-codec/commons-codec/1.12/commons-codec-1.12.jar!/org/apache/commons/codec/Charsets.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/MavenRepo/commons-codec/commons-codec/1.12/commons-codec-1.12.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/MavenRepo/org/apache/httpcomponents/httpcore/4.4.11/httpcore-4.4.11.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2592" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="29" column="24" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/MavenRepo/com/alibaba/fastjson/1.2.70/fastjson-1.2.70.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/hms/account/code/bean/AccessTokenInfos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="22" column="29" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/hms/account/code/bean/ErrorInfos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/hms/account/code/bean/ResponseInfos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/hms/account/code/bean/TokensEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/hms/account/code/bean/UserInfos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/hms/account/code/AuthCodeUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1485">
+          <caret line="69" column="7" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/hms/account/code/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/hms/account/idtoken/IdTokenUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1593">
+          <caret line="73" column="38" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/hms/account/AuthCodeDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#6974#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/hms/account/IdTokenDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>accountservertool</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: com.alibaba:fastjson:1.2.70</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
