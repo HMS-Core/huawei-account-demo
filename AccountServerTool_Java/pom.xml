@@ -5,11 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.huawei.hms</groupId>
-    <artifactId>account-server-tool</artifactId>
+    <artifactId>accountservertool</artifactId>
     <version>1.0-SNAPSHOT</version>
-
     <packaging>jar</packaging>
-
     <build>
         <plugins>
             <plugin>

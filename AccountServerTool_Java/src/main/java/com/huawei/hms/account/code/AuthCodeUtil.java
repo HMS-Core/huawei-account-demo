@@ -77,29 +77,35 @@ public class AuthCodeUtil {
      * @param appSecret
      * @param redirectUri
      * @return
-     * @throws IOException
      */
-    public static ResponseInfos getTokensByCode(String code, String appId, String appSecret, String redirectUri) throws IOException {
+    public static ResponseInfos getTokensByCode(String code, String appId, String appSecret, String redirectUri) {
         HttpPost httpPost = new HttpPost(TOKEN_URI);
+        ResponseInfos responseInfos = null;
         List<NameValuePair> request = new ArrayList<>();
         request.add(new BasicNameValuePair("redirect_uri", redirectUri));
         request.add(new BasicNameValuePair("code", code));
         request.add(new BasicNameValuePair("client_secret", appSecret));
         request.add(new BasicNameValuePair("client_id", appId));
         request.add(new BasicNameValuePair("grant_type", CODE_GRANT_TYPE));
-        httpPost.setEntity(new UrlEncodedFormEntity(request));
-        return executeHttpRequest(httpPost);
+        try {
+            httpPost.setEntity(new UrlEncodedFormEntity(request));
+            responseInfos = executeHttpRequest(httpPost);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return responseInfos;
     }
 
     /**
      * parse access token
      * if request success,will return as ResponseInfos{body=AccessTokenInfos,nspStatus=0}
      * if request fail,will return as ResponseInfos{body=ErrorInfos,nspStatus=*}
+     *
      * @param accessToken
      * @return
-     * @throws IOException
      */
-    public static ResponseInfos parseAccessToken(String accessToken) throws IOException {
+    public static ResponseInfos parseAccessToken(String accessToken) {
+        ResponseInfos responseInfos = null;
         HttpPost httpPost = new HttpPost(URL_SCOPE);
         httpPost.setHeader("Content-Type", "application/x-www-form-urlencoded");
         StringBuffer stringBuffer = new StringBuffer();
@@ -108,10 +114,15 @@ public class AuthCodeUtil {
         stringBuffer.append("&open_id=");
         stringBuffer.append(OPEN_ID);
         stringBuffer.append("&access_token=");
-        stringBuffer.append(URLEncoder.encode(accessToken, "UTF-8"));
-        StringEntity entity = new StringEntity(stringBuffer.toString());
-        httpPost.setEntity(entity);
-        return executeHttpRequest(httpPost);
+        try {
+            stringBuffer.append(URLEncoder.encode(accessToken, "UTF-8"));
+            StringEntity entity = new StringEntity(stringBuffer.toString());
+            httpPost.setEntity(entity);
+            responseInfos = executeHttpRequest(httpPost);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return responseInfos;
     }
 
     /**
@@ -123,29 +134,36 @@ public class AuthCodeUtil {
      * @param appId
      * @param appSecret
      * @return
-     * @throws IOException
      */
-    public static ResponseInfos updateAccessToken(String refreshToken, String appId, String appSecret) throws IOException {
+    public static ResponseInfos updateAccessToken(String refreshToken, String appId, String appSecret) {
+        ResponseInfos responseInfos = null;
         HttpPost httpPost = new HttpPost(TOKEN_URI);
         List<NameValuePair> request = new ArrayList<>();
         request.add(new BasicNameValuePair("refresh_token", refreshToken));
         request.add(new BasicNameValuePair("client_secret", appSecret));
         request.add(new BasicNameValuePair("client_id", appId));
         request.add(new BasicNameValuePair("grant_type", REFRESH_TOKEN_GRANT_TYPE));
-        httpPost.setEntity(new UrlEncodedFormEntity(request));
-        return executeHttpRequest(httpPost);
+        try {
+            httpPost.setEntity(new UrlEncodedFormEntity(request));
+            responseInfos = executeHttpRequest(httpPost);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return responseInfos;
     }
 
     /**
      * get user Infos by access token
      * if request success,will return as ResponseInfos{body=UserInfos,nspStatus=0}
-     *if request fail,will return as ResponseInfos{body=ErrorInfos,nspStatus=*}
+     * if request fail,will return as ResponseInfos{body=ErrorInfos,nspStatus=*}
+     *
      * @param accessToken
      * @param getNickName
      * @return
      * @throws IOException
      */
-    public static ResponseInfos getUserInfos(String accessToken, int getNickName) throws IOException {
+    public static ResponseInfos getUserInfos(String accessToken, int getNickName) {
+        ResponseInfos responseInfos = null;
         HttpPost httpPost = new HttpPost(URL_GET_INFO);
         httpPost.setHeader("Content-Type", "application/x-www-form-urlencoded");
         StringBuffer stringBuffer = new StringBuffer();
@@ -154,17 +172,29 @@ public class AuthCodeUtil {
         stringBuffer.append("&nsp_svc=");
         stringBuffer.append(NSP_SVC_GET_INFO);
         stringBuffer.append("&access_token=");
-        stringBuffer.append(URLEncoder.encode(accessToken, "UTF-8"));
-        stringBuffer.append("&getNickName=");
-        stringBuffer.append(getNickName);
-        StringEntity entity = new StringEntity(stringBuffer.toString());
-        httpPost.setEntity(entity);
-        return executeHttpRequest(httpPost);
+        try {
+            stringBuffer.append(URLEncoder.encode(accessToken, "UTF-8"));
+            stringBuffer.append("&getNickName=");
+            stringBuffer.append(getNickName);
+            StringEntity entity = new StringEntity(stringBuffer.toString());
+            httpPost.setEntity(entity);
+            responseInfos = executeHttpRequest(httpPost);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return responseInfos;
     }
 
-    private static ResponseInfos executeHttpRequest(HttpPost httpPost) throws IOException {
-        CloseableHttpResponse response = getClient().execute(httpPost);
+    /**
+     * execute http request
+     *
+     * @param httpPost
+     * @return
+     */
+    private static ResponseInfos executeHttpRequest(HttpPost httpPost) {
+        CloseableHttpResponse response = null;
         try {
+            response = getClient().execute(httpPost);
             HttpEntity responseEntity = response.getEntity();
             Header[] nsp_statuses = response.getHeaders("NSP_STATUS");
             String ret = responseEntity != null ? EntityUtils.toString(responseEntity, Charsets.UTF_8) : null;
@@ -180,9 +210,16 @@ public class AuthCodeUtil {
                 logger.info("NSP_STATUS:{}", value);
             }
             return responseInfos;
+        } catch (IOException e) {
+            e.getStackTrace();
         } finally {
-            response.close();
+            try {
+                response.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
+        return null;
     }
 
     /**
