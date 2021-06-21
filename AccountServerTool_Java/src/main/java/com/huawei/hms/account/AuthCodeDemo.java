@@ -21,7 +21,10 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.huawei.hms.account.code.AuthCodeUtil;
 import com.huawei.hms.account.code.Constants;
-import com.huawei.hms.account.code.bean.*;
+import com.huawei.hms.account.code.bean.ErrorInfos;
+import com.huawei.hms.account.code.bean.ResponseInfos;
+import com.huawei.hms.account.code.bean.TokensEntity;
+import com.huawei.hms.account.code.bean.UserInfos;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
