@@ -11,7 +11,7 @@ English | [中文](https://github.com/HMS-Core/huawei-account-demo/blob/android_
  * [Sample Code](#sample-code)
  * [Result](#result)
  * [License](#license)
- 
+
 ## Introduction
 Account Code Scenarios Demo encapsulates APIs of the HUAWEI Account Kit. It provides sample program for your reference or usage.
 The following describes of Account Code Scenarios Demo.
@@ -23,6 +23,10 @@ To use functions provided by examples, please make sure Huawei Mobile Service 5.
 Android SDK Version >= 23 and JDK version >= 1.8 is recommended.
 	
 ## Configurations  
+
+1. You need to change information such as packagename and AppId in the Demo to the application information created on the Developer Alliance.
+
+2. Download the agconnect-services.json file of the created application to the corresponding directory in the project directory.
 
 ## Sample Code
 This Account Code Scenarios Demo provides demonstration for following scenarios:

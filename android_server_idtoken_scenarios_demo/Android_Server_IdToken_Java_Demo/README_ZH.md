@@ -23,6 +23,10 @@ Android_Server_IdToken_DemoÊ¾Àý´úÂë¶Ô»ªÎªÕÊºÅ·þÎñ£¨HUAWEI Account Kit£©³£ÓÃ½Ó¿ÚÔ
 
 ## ÅäÖÃ
 
+1¡¢ÄúÐè½«DemoÖÐµÄpackagename¡¢AppIdµÈÐÅÏ¢»»³ÉÄúÔÚ¿ª·¢ÕßÁªÃËÉÏ´´½¨µÄÓ¦ÓÃÐÅÏ¢
+
+2¡¢½«Äú´´½¨µÄÓ¦ÓÃµÄagconnect-services.jsonÎÄ¼þÏÂÔØÖÁ¹¤³ÌÄ¿Â¼¶ÔÓ¦Î»ÖÃ
+
 ## Ê¾Àý´úÂë
 ÒÆ¶¯ÓëÖÇ»ÛÆÁÓ¦ÓÃÓÐ·þÎñÆ÷ID-TokenÄ£Ê½½ÓÈë»ªÎªÕÊºÅ³¡¾°µÄ¿Í»§¶ËJavaÊ¾Àý´úÂëÌá¹©ÁËÒÔÏÂÊ¹ÓÃ³¡¾°£º
 1. µÇÂ¼ÊÚÈ¨
