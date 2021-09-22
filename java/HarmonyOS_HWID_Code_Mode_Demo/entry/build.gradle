@@ -1,0 +1,38 @@
+apply plugin: 'com.huawei.ohos.hap'
+apply plugin: 'com.huawei.ohos.decctest'
+ohos {
+    signingConfigs {
+        debug {
+            storeFile file('D:\\01.Account\\开放接口文档\\鸿蒙JAVA\\key\\hmosDemoSzKey.p12')
+            storePassword '0000001A9BEAF5A600284F0D8396DA4FAA37889DB9EAC719F8E5B9B353C6F4BDD534987C0099249F88C1'
+            keyAlias = 'hmosDemoSzKeyAlias'
+            keyPassword '0000001A56EF68BA4680DD5CD4F339005AD856F927BE1F8AE937AF920FE7D11FA7B2A32365D2156ECFB8'
+            signAlg = 'SHA256withECDSA'
+            profile file('D:\\01.Account\\开放接口文档\\鸿蒙JAVA\\key\\调试用的证书和profile\\accountHmsSzProfileDebug.p7b')
+            certpath file('D:\\01.Account\\开放接口文档\\鸿蒙JAVA\\key\\调试用的证书和profile\\homsDemoSzCSR.cer')
+        }
+    }
+    compileSdkVersion 5
+    defaultConfig {
+        compatibleSdkVersion 4
+    }
+    buildTypes {
+        release {
+            proguardOpt {
+                proguardEnabled false
+                rulesFiles 'proguard-rules.pro'
+            }
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.har'])
+    testImplementation 'junit:junit:4.13'
+    ohosTestImplementation 'com.huawei.ohos.testkit:runner:1.0.0.100'
+    implementation 'com.huawei.hms:hwid-ohos:1.0.0.16'
+}
+decc {
+    supportType = ['html', 'xml']
+}

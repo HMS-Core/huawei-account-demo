@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+
+    <DirectionalLayout
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:orientation="vertical">
+    <Button
+        ohos:id="$+id:btn_hwid_sign_in"
+        ohos:height="match_parent"
+        ohos:width="match_content"
+        ohos:background_element="$graphic:capsule_button_element"
+        ohos:layout_alignment="horizontal_center"
+        ohos:min_width="200vp"
+        ohos:top_margin="5vp"
+        ohos:right_padding="16vp"
+        ohos:left_padding="16vp"
+        ohos:padding="2vp"
+        ohos:text="Sign in with HUAWEI ID"
+        ohos:text_size="20fp"
+        ohos:text_color="#ffffff"
+        ohos:element_left="$media:icon_huawei"/>
+
+        <Button
+            ohos:id="$+id:btn_hwid_sign_out"
+            ohos:height="match_parent"
+            ohos:width="match_content"
+            ohos:background_element="$graphic:capsule_button_element"
+            ohos:layout_alignment="horizontal_center"
+            ohos:min_width="200vp"
+            ohos:top_margin="5vp"
+            ohos:right_padding="16vp"
+            ohos:left_padding="16vp"
+            ohos:padding="3vp"
+            ohos:text_color="#ffffff"
+            ohos:text="Sign Out"
+            ohos:text_size="20fp"/>
+        <Button
+            ohos:id="$+id:btn_hwid_cancel_authorization"
+            ohos:height="match_parent"
+            ohos:width="match_content"
+            ohos:background_element="$graphic:capsule_button_element"
+            ohos:layout_alignment="horizontal_center"
+            ohos:min_width="200vp"
+            ohos:top_margin="5vp"
+            ohos:right_padding="16vp"
+            ohos:left_padding="16vp"
+            ohos:padding="3vp"
+            ohos:text_color="#ffffff"
+            ohos:text="Cancel Authorization"
+            ohos:text_size="20fp"/>
+    </DirectionalLayout>
+    <DirectionalLayout
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:orientation="vertical">
+    <Text
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:background_element="#FFDEAD"
+        ohos:padding="5vp"
+        ohos:layout_alignment="horizontal_center"
+        ohos:text_font="sans-serif-medium"
+        ohos:text_size="18fp"
+        ohos:text="Information View - support scroll"
+        />
+
+    <ScrollView
+        ohos:height="300vp"
+        ohos:width="match_parent"
+        ohos:background_element="#FFDEAD"
+        ohos:rebound_effect="true">
+
+
+        <Text
+            ohos:id="$+id:txt_info_show"
+            ohos:height="match_content"
+            ohos:width="match_parent"
+            ohos:multiple_lines="true"
+            ohos:padding="5vp"
+            ohos:text_size="10fp"
+            />
+
+    </ScrollView>
+    </DirectionalLayout>
+    <DirectionalLayout
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:orientation="vertical">
+    <Button
+        ohos:id="$+id:btn_hwid_clear"
+        ohos:height="match_parent"
+        ohos:width="match_content"
+        ohos:background_element="$graphic:capsule_button_element"
+        ohos:layout_alignment="horizontal_center"
+        ohos:min_width="200vp"
+        ohos:top_margin="5vp"
+        ohos:right_padding="16vp"
+        ohos:left_padding="16vp"
+        ohos:padding="3vp"
+        ohos:text="Clear Log Info"
+        ohos:text_size="20fp"/>
+    </DirectionalLayout>
+
+</DirectionalLayout>
