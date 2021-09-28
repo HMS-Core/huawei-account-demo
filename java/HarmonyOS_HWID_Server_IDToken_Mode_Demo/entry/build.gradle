@@ -31,7 +31,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar', '*.har'])
     testImplementation 'junit:junit:4.13'
     ohosTestImplementation 'com.huawei.ohos.testkit:runner:1.0.0.100'
-    implementation 'com.huawei.hms:hwid-ohos:1.0.0.16'
+    implementation 'com.huawei.hms:hwid-ohos:6.1.0.300'
 }
 decc {
     supportType = ['html', 'xml']

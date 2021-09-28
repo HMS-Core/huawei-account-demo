@@ -10,10 +10,7 @@ ohos {
 	
 buildscript {
     repositories {
-        maven {
-            url 'http://dgg.maven.repo.cmc.tools.huawei.com/artifactory/Product-cloudserviceSDK-release/'
-        }
-        maven {
+	    maven {
             url 'https://repo.huaweicloud.com/repository/maven/'
         }
         maven {
@@ -28,13 +25,9 @@ buildscript {
 
 allprojects {
     repositories {
-        maven {
-            url 'http://dgg.maven.repo.cmc.tools.huawei.com/artifactory/Product-cloudserviceSDK-release/'
-        }
-        maven {
+	    maven {
             url 'https://repo.huaweicloud.com/repository/maven/'
         }
-
         maven {
             url 'https://developer.huawei.com/repo/'
         }

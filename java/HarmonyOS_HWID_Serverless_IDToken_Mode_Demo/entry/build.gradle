@@ -33,7 +33,7 @@ dependencies {
     ohosTestImplementation 'com.huawei.ohos.testkit:runner:1.0.0.100'
 
     // 华为帐号SDK依赖引入
-    implementation 'com.huawei.hms:hwid-ohos:1.0.0.16'
+    implementation 'com.huawei.hms:hwid-ohos:6.1.0.300'
 }
 decc {
     supportType = ['html', 'xml']
