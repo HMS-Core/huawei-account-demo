@@ -1,41 +1,36 @@
-﻿# Accountkit-Android-sample
+# HMS Core Account Kit Client-Side Sample Code (Kotlin)
 
-English | [中文](https://github.com/HMS-Core/huawei-account-demo/blob/master/Account-Client-Kotlin-Demo/README_ZH.md) 
+English | [中文](README_ZH.md)
 
-## Table of Contents
+## Contents
+* [Introduction](#Introduction)
+* [Installation](#Installation)
+* [Environment Requirements](#Environment-Requirements)
+* [Sample Code](#Sample-Code)
+* [License](#License)
 
- * [Introduction](#introduction)
- * [Installation](#installation)
- * [Supported Environments](#supported-environments)
- * [Sample Code](#sample-code)
- * [License](#license)
- 
- 
 ## Introduction
-Android sample code encapsulates APIs of the HUAWEI Account Kit server. It provides sample program for your reference or usage.
-The following describes of Android sample code.
-
-hmssample: Sample code packages. This package contains code that implements Sign, SignInCode, SilentSignIn, SignOut and CancelAuthorization.
-logger: This packages contains code that implements logger View.
-    
+The sample code for Android encapsulates the client-side APIs of Account Kit, containing multiple demo apps for your reference or direct use. The sample code offers:
+**hmssample**: sample code package, which implements the following functions: sign-in, authorized sign-in, silent sign-in, sign-out, and authorization revocation
+**logger**: records logs.
 
 ## Installation
-To use functions provided by examples, please make sure Huawei Mobile Service 4.0 has been installed on your cellphone.
-	
-	
-## Supported Environments
-Android SDK Version >= 23 and JDK version >= 1.8 is recommended.
-	
-	
+To use capabilities offered in the sample code, make sure that HMS Core (APK) 4.0 has been installed on your device.
+
+## Environment Requirements
+Android SDK version: 23 or later
+
+JDK version: 1.8 or later
+
 ## Sample Code
-This demo provides demonstration for following scenarios:
-1. ID-Token Mode Sign In.
-2. Authorization Code Mode Sign In. 
-3. Silent Sign In.
-4. Sign out.
-5. Cancel Authorization.
+The sample code shows how to implement the following functions:
+1. Sign-in in ID token mode
+2. Sign-in in authorization code mode
+3. Silent sign-in
+4. Sign-out from an ID
+5. Authorization revocation
 
-The business logic of ID-Token Mode Sign In and Authorization Code Mode Sign In are implemented in AccountActivity.kt.
+Service logic: Implement sign-in in ID token mode and authorization code mode in **AccountActivity.kt**.
 
-##  License
-Account-kit Android sample is licensed under the [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+## License
+The sample code is licensed under [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0).

@@ -1,6 +1,6 @@
 # 华为帐号服务客户端Kotlin示例代码
 
-中文 | [English](https://github.com/HMS-Core/huawei-account-demo/blob/master/Account-Client-Kotlin-Demo/README.md) 
+中文 | [English](README.md) 
 
 ## 目录
 * [简介](#简介)
@@ -10,7 +10,7 @@
 * [授权许可](#授权许可)
 
 ## 简介
-Android示例代码对华为帐号服务（HUAWEI Account Kit）的客户端接口进行封装，包含丰富的示例程序，方便您参考或直接使用。详情如下：
+Android示例代码对华为帐号服务（Account Kit）的客户端接口进行封装，包含丰富的示例程序，方便您参考或直接使用。详情如下：
 hmssample：示例代码包，可实现登录、授权登录、静默登录、退出帐号和帐号取消授权功能。
 logger：可实现日志记录。
 

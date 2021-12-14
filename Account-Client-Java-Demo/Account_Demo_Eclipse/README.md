@@ -1,66 +1,62 @@
-﻿## Accountkit-Android-sample
+﻿# HMS Core Account Kit Client-Side Sample Code (Eclipse)
 
-English | [中文](https://github.com/HMS-Core/huawei-account-demo/blob/master/Account-Client-Java-Demo/Account_Demo_Eclipse/README_ZH.md) 
+English | [中文](README_ZH.md)
 
-## Table of Contents
+## Contents
+* [Introduction](#Introduction)
+* [Installation](#Installation)
+* [Environment Requirements](#Environment-Requirements)
+* [Configuration](#Configuration)
+* [Quick Tutorial](#Quick-Tutorial)
+* [Sample Code](#Sample-Code)
+* [License](#License)
 
- * [Introduction](#introduction)
- * [Installation](#installation)
- * [Configurations](#configurations)
- * [Supported Environments](#supported-environments)
- * [Tutorial](#tutorial)
- * [Sample Code](#sample-code)
- * [License](#license)
- 
- 
 ## Introduction
-Android sample code encapsulates APIs of the HUAWEI Account Kit server. It provides sample program for your reference or usage.
-The following describes of Android sample code.
-
-hmssample: Sample code packages. This package  contains code that implements Sign,  SignInCode and SignOut.
-logger: This packages contains code that implements logger View.
-    
+The sample code for Android encapsulates the client-side APIs of Account Kit, containing multiple demo apps for your reference or direct use. The sample code offers:
+**hmssample**: sample code package, which implements the following functions: sign-in, authorized sign-in, and sign-out
+**logger**: records logs.
 
 ## Installation
-To use functions provided by examples, please make sure Huawei Mobile Service 4.0 has been installed on your cellphone.
-## Supported Environments
-Android SDK Version >= 23 and JDK version >= 1.8 is recommended.
-	
-## Configurations  
-The following describes parameters in Contant.java
-CLIENT_ID:  App ID, which can be obtained from AppGallery Connect website, please replace it with your app's client ID.
-CERT_URL:  Request CERT_URL to get public key's URL from jwks_uri, then get public key.
-ID_TOKEN_ISSUE:  The value that ISS string of ID Token should be equal to.
-	
-## Tutorial
-1. Adding project dependencies.
-Please refer to the [Adding Project Dependencies section of the Integrated HMS SDK in the Eclipse IDE](https://developer.huawei.com/consumer/en/doc/development/HMS-Guides/account-preparation)
-2. Right-click the project in Eclipse IDE and click Export.
+To use capabilities offered in the sample code, make sure that HMS Core (APK) 4.0 has been installed on your device.
 
-<img src="hmssample/images/export.png" alt="selectkeystore"/>
-    
-3. Click **Next** to enter keystore selection interface.
-4. Select **Use existing keystore**， click **Browse**，select the **lightregion.jks** file in the your demo directory, and enter **android** in the password input box.
-<img src="hmssample/images/keystore.png" alt="selectkeystore"/>
-    
-5. Select **Use existing Key**, select **androiddebugkey** in the Alias selection box, and enter **android** in the password box.
-<img src="hmssample/images/keystorealias.png" alt="keystorealias"/>
+## Environment Requirements
+Android SDK version: 23 or later
 
-6. Click **Browser**, select the APK export location, and click **Finish**.
-<img src="hmssample/images/finish.png" alt="finish"/>
+JDK version: 1.8 or later
 
-7. Install and start the demo, you should be able to see the following page.
-<img src="hmssample/images/demo.png" alt="mainpage" height="600"/>
-	
-	
+## Configuration
+Parameters in **Contant.java** include:
+**CLIENT_ID**: app ID, which can be obtained from AppGallery Connect
+**CERT_URL**: public key. To get it, obtain the public key URI from **jwks_uri** and then access this URI.
+**ID_TOKEN_ISSUE**: same as the value of **iss** in the ID token
+
+## Quick Tutorial
+1. Add build dependencies. For details, please refer to [Integrating the HMS Core SDK into Your App Project in the Eclipse IDE](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/ep-integration-hms-core-sdk-0000001050309714?ha_source=hms1).
+
+2. Right-click the project in Eclipse. Click **Export**.
+![image.png](http://image.huawei.com/tiny-lts/v1/images/d9a59bb5b945f8c95979be3b7b3b1d37_511x542.png@900-0-90-f.png)
+
+3. Click **Next**. The **Keystore selection** page is displayed.
+
+4. Select **Use existing keystore** and click **Browse**. Select the **lightregion.jks** file and enter **android** as the password.
+![image.png](http://image.huawei.com/tiny-lts/v1/images/f614cfefc03ee9dbbc1dba2daeedc304_510x542.png@900-0-90-f.png)
+
+5. Select **Use existing key**. Set **Alias** to **androiddebugkey**. Enter **android** as the password.
+![image.png](http://image.huawei.com/tiny-lts/v1/images/d70ab5ecddbd53eb5ba63c239f7efa1f_510x542.png@900-0-90-f.png)
+
+6. Click **Browse**. Specify a path for the demo app (APK) to be exported. Click **Finish**.
+![image.png](http://image.huawei.com/tiny-lts/v1/images/db9fd9f9b2ebd23f3f99685bacc30192_511x540.png@900-0-90-f.png)
+
+7. Install and launch the demo app. A screen will show as follows.
+![image.png](http://image.huawei.com/tiny-lts/v1/images/b3e3cf07c5da4ddd419559ba7e76fd30_276x599.png@900-0-90-f.png)
+
 ## Sample Code
-This demo provides demonstration for following scenarios:
-1. ID-Token Mode Sign In.  Sign in and Id-Token verification are both included.
-2. Authorization Code Mode Sign In. 
-3. Sign out.
+The sample code shows how to implement the following functions:
+1. Sign-in in ID token mode. This mode includes sign-in and ID token verification.
+2. Sign-in in authorization code mode.
+3. Sign-out from an ID.
 
-The business logic of ID-Token Mode Sign In and Authorization Code Mode Sign In are implemented in HuaweiIdActivity.java while Id-Token verification are implemented in  IDTokenParse.java.
-    
+Service logic: Implement sign-in in ID token mode and authorization mode in **HuaweiIdActivity.java**. Implement ID token verification in **IDTokenParse.java**.
 
-##  License
-Account-kit Android sample is licensed under the [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+## License
+The sample code is licensed under [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0).

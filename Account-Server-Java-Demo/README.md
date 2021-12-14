@@ -1,43 +1,47 @@
-﻿## Accountkit-Android-sample
+## **HMS Core Account Kit Server-Side Sample Code**
+
+English | [中文](README_ZH.md)
 
 
-## Table of Contents
+## **Contents**
 
- * [Introduction](#introduction)
- * [Installation](#installation)
- * [Configurations](#configurations)
- * [Supported Environments](#supported-environments)
- * [Sample Code](#sample-code)
- * [License](#license)
- 
- 
-## Introduction
-Android sample code encapsulates APIs of the HUAWEI Account Kit server. It provides sample program for your reference or usage.
-The following describes of Android sample code.
+ * [Introduction](#Introduction)
+ * [Installation](#Installation)
+ * [Configuration](#Configuration)
+ * [Environment Requirements](#Environment-Requirements)
+ * [Sample Code](#Sample-Code)
+ * [License](#License)
 
-hmssample: Sample code packages. This package  contains code that implements Sign,  SignInCode and SignOut.
-logger: This packages contains code that implements logger View.
-    
 
-## Installation
-To use functions provided by examples, please make sure Huawei Mobile Service 4.0 has been installed on your cellphone.
-## Supported Environments
-Android SDK Version >= 23 and JDK version >= 1.8 is recommended.
-	
-## Configurations  
-The following describes parameters in Contant.java
-CLIENT_ID:  App ID, which can be obtained from AppGallery Connect website, please replace it with your app's client ID.
-CERT_URL:  Request CERT_URL to get public key's URL from jwks_uri, then get public key.
-ID_TOKEN_ISSUE:  The value that ISS string of ID Token should be equal to.
-	
-## Sample Code
-This demo provides demonstration for following scenarios:
-1. Authorization code to obtain Access Token.
-2. Verify the ID Token with public key. 
-3. Parsing Access Token.
+## **Introduction**
+The sample code for Android encapsulates the server-side APIs of Account Kit, containing multiple demo apps for your reference or direct use. The sample code offers:
 
-The business logic of obtain Access Token is implemented in TokenAPIDemo.java, Verify the ID Token is implemented in IDTokenAPIDemo.java, and Parse Access Token is implemented in GetTokenInfoAPIDemo.java.
-    
+**hmssample**: sample code package, which implements the following functions: sign-in, authorized sign-in, and sign-out
 
-##  License
-Account-kit Android sample is licensed under the [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+**logger**: records logs.
+
+## **Installation**
+To use capabilities offered in the sample code, make sure that HMS Core (APK) 4.0 has been installed on your device.
+## **Environment Requirements**
+Android SDK version: 23 or later
+
+JDK version: 1.8 or later
+
+## **Configuration**
+Parameters in **Contant.java** include:
+
+**CLIENT_ID**: app ID, which can be obtained from AppGallery Connect
+
+**CERT_URL**: public key. To get it, obtain the public key URI from **jwks_uri** and then access this URI.
+
+**ID_TOKEN_ISSUE**: same as the value of **iss** in the ID token
+
+## **Sample Code**
+The sample code shows how to implement the following functions:
+
+1. Use the authorization code to obtain the access token in **TokenAPIDemo.java**.
+2. Use the public key to verify the ID token in **IDTokenAPIDemo.java**.
+3. Parse the access token in **GetTokenInfoAPIDemo.java**.
+
+##  **License**
+The sample code is licensed under [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0).

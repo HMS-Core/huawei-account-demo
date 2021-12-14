@@ -12,7 +12,7 @@
 * [授权许可](#授权许可)
 
 ## 简介
-Android示例代码对华为帐号服务（HUAWEI Account Kit）的客户端接口进行封装，包含丰富的示例程序，方便您参考或直接使用。详情如下：
+Android示例代码对华为帐号服务（Account Kit）的客户端接口进行封装，包含丰富的示例程序，方便您参考或直接使用。详情如下：
 hmssample：示例代码包，可实现登录、授权登录和退出帐号功能。
 logger：可实现日志记录。
 
@@ -29,7 +29,7 @@ CERT_URL：可从jwks_uri字段获取公钥URI，访问公钥URI获取公钥。
 ID_TOKEN_ISSUE：与ID Token的iss字段的值相同。
 
 ## 快速上手
-1. 添加项目依赖。具体请参考在Eclipse项目中集成HMS Core SDK。
+1. 添加项目依赖。具体请参考[在Eclipse项目中集成HMS Core SDK](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/ep-integration-hms-core-sdk-0000001050309714)。
 
 2. 在Eclipse IDE中右击打开项目工程，并点击“Export”。
 ![image.png](http://image.huawei.com/tiny-lts/v1/images/d9a59bb5b945f8c95979be3b7b3b1d37_511x542.png@900-0-90-f.png)
