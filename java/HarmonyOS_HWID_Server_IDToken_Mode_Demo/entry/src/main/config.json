@@ -49,8 +49,8 @@
     "metaData": {
       "customizeData": [
         {
-          "name": "{your app name}",
-          "value": "{your app id}"
+          "name": "com.huawei.hms.client.appid",
+          "value": "{OAuth Client ID}"
         }
       ]}
   }

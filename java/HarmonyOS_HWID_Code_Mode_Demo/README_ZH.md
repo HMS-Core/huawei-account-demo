@@ -1,6 +1,6 @@
 # 鸿蒙应用使用Code模式接入华为帐号示例代码
 
-中文 | [English]() 
+中文 | [English](README.md) 
 
 ## 目录
 * [简介](#简介)
@@ -22,6 +22,10 @@
 使用HarmonyOS2.0及以上版本、JDK 1.8及以上版本。
 
 ## 配置
+1. 在AppGallery Connect网站下载自己应用的“agconnect-services.json”文件，拷贝到示例工程的entry模块根目录下。
+2. 修改示例工程中entry模块的“config.json”文件中的“bundleName”为您自己的应用包名。
+3. 修改示例工程中entry模块的“config.json”文件中“metaData”属性值value为您自己应用的“OAuth 2.0客户端ID（凭据）：Client ID”。
+4. 参见[配置应用签名信息](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/harmonyos-java-config-app-signing-0000001199536987) ,配置您自己的应用签名。
 
 ## 示例代码
 鸿蒙应用使用code模式接入华为帐号场景的客户端Java示例代码提供了以下使用场景的演示：

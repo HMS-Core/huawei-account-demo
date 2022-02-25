@@ -1,6 +1,6 @@
 # Android Serverless ID-Token Demo
 
-English | [中文]() 
+English | [中文](README_ZH.md) 
 
 
 ## Table of Contents
@@ -24,7 +24,10 @@ HarmonyOS 2.0 or later and JDK 1.8 or later are used.
 
 	
 ## Configurations  
-
+1. Download the agconnect-services.json file of your app in AppGallery Connect, and copy the file to the root directory of the entry module in the demo project.
+2. In the config.json file of the entry module, set bundleName to your app package name.
+3. In the config.json file of the entry module, set value in the metaData block to the OAuth 2.0 client ID of your app.
+4. Configure your app signing by following [the instructions](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/harmonyos-java-config-app-signing-0000001199536987). 
 	
 ## Sample Code
 The Java sample code for the Harmony application to connect to a Huawei ID in idToken mode provides the following examples:
