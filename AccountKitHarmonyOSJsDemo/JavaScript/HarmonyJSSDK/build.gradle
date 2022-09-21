@@ -1,0 +1,58 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply plugin: 'com.huawei.ohos.app'
+
+//For instructions on signature configuration, see https://developer.harmonyos.com/cn/docs/documentation/doc-guides/ide_debug_device-0000001053822404#ZH-CN_TOPIC_0000001154985555__section1112183053510
+ohos {
+    signingConfigs {
+        debug {
+            storeFile file('xxx')
+            storePassword 'xxx'
+            keyAlias = 'xxx'
+            keyPassword 'xxx'
+            signAlg = 'xxx'
+            profile file('xxx')
+            certpath file('xxx')
+        }
+        release {
+            storeFile file('xxx')
+            storePassword 'xxx'
+            keyAlias = 'xxx'
+            keyPassword 'xxx'
+            signAlg = 'xxx'
+            profile file('xxx')
+            certpath file('xxx')
+        }
+    }
+    compileSdkVersion 5
+    defaultConfig {
+        compatibleSdkVersion 4
+    }
+}
+
+buildscript {
+    repositories {
+        maven {
+            url 'https://repo.huaweicloud.com/repository/maven/'
+        }
+        maven {
+            url 'https://developer.huawei.com/repo/'
+        }
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.huawei.ohos:hap:3.0.5.11'
+        classpath 'com.huawei.agconnect:agcp-harmony:1.3.0.300'
+    }
+}
+
+allprojects {
+    repositories {
+        maven {
+            url 'https://repo.huaweicloud.com/repository/maven/'
+        }
+        maven {
+            url 'https://developer.huawei.com/repo/'
+        }
+        jcenter()
+    }
+}

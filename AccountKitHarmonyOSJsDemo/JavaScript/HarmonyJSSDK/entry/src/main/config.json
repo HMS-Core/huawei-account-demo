@@ -1,0 +1,72 @@
+{
+  "app": {
+    "bundleName": "com.example.harmonyjssdk",
+    "vendor": "example",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {
+    "default": {
+      "allowComponentsProxy": true
+    }
+  },
+  "module": {
+    "package": "com.example.harmonyjssdk",
+    "name": ".MyApplication",
+    "mainAbility": "com.example.harmonyjssdk.MainAbility",
+    "deviceType": [
+      "phone",
+      "tablet",
+      "tv",
+      "wearable"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry",
+      "installationFree": false
+    },
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "name": "com.example.harmonyjssdk.MainAbility",
+        "icon": "$media:icon",
+        "description": "$string:mainability_description",
+        "label": "$string:entry_MainAbility",
+        "type": "page",
+        "launchType": "standard"
+      }
+    ],
+    "js": [
+      {
+        "pages": [
+          "pages/index/index"
+        ],
+        "name": "default",
+        "window": {
+          "designWidth": 720,
+          "autoDesignWidth": true
+        }
+      }
+    ],
+    "metaData": {
+      "customizeData": [
+        {
+          "name": "com.huawei.hms.client.appid",
+          "value": "OAuth Client ID"
+        }
+      ]
+    }
+  }
+}

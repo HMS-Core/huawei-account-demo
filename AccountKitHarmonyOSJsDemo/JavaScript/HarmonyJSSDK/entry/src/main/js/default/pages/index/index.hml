@@ -1,0 +1,11 @@
+<div class="container">
+    <button onclick="signIn()" class="btn">SignIn</button>
+    <button onclick="silentSignIn()" class="btn">SilentSignIn</button>
+    <button onclick="cancelAuthorization()" class="btn">CancelAuthorization</button>
+    <button onclick="signOut()" class="btn">SignOut</button>
+    <div class ="result">
+        <text class ="text">
+            {{signInResult}}
+        </text>
+    </div>
+</div>

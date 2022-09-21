@@ -1,0 +1,12 @@
+{
+  "string": [
+    {
+      "name": "app_name",
+      "value": "HarmonyJSSDK"
+    },
+    {
+      "name": "mainability_description",
+      "value": "hap sample empty page"
+    }
+  ]
+}

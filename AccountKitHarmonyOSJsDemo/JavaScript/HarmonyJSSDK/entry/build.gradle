@@ -1,0 +1,24 @@
+apply plugin: 'com.huawei.ohos.hap'
+apply plugin: 'com.huawei.agconnect'
+//For instructions on signature configuration, see https://developer.harmonyos.com/cn/docs/documentation/doc-guides/ide_debug_device-0000001053822404#ZH-CN_TOPIC_0000001154985555__section1112183053510
+ohos {
+    compileSdkVersion 5
+    defaultConfig {
+        compatibleSdkVersion 4
+    }
+    buildTypes {
+        release {
+            proguardOpt {
+                proguardEnabled false
+                rulesFiles 'proguard-rules.pro'
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.har'])
+    testImplementation 'junit:junit:4.13'
+    implementation 'com.huawei.hms:jsb-ohos-adapter:6.4.0.301'
+    implementation 'com.huawei.agconnect:agconnect-core-harmony:1.3.0.300'
+}
