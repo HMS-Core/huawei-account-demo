@@ -1,6 +1,6 @@
 # AccountKit Demo (HarmonyOs-JavaScript)
 
-English | [中文](https://github.com/HMS-Core/huawei-account-demo/blob/android_code_scenarios/README_ZH.md) 
+English | [中文](https://github.com/HMS-Core/huawei-account-demo/blob/harmonyos_javascript_demo/AccountKitHarmonyOSJsDemo/JavaScript/HarmonyJSSDK/README_ZH.md) 
 
 ## Table of Contents
 
