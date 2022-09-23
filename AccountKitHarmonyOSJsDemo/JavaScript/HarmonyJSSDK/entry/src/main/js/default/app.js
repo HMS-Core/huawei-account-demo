@@ -1,4 +1,4 @@
-import {hmsjsb} from '@hmscore/hms-js-base'
+import {hmsjsb} from '@hw-hmscore/hms-js-base'
 export default {
     hmsData: {
         eventCallbackMap: {}
