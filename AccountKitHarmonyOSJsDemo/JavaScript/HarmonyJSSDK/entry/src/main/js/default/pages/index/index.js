@@ -7,7 +7,6 @@ export default {
     onInit() {
         console.log("****onInit****");
         this.title = this.$t('strings.world');
-        // 104693485 这个appid 是张媛媛 84190395 02515651665862 提供
     },
     signIn() {
         this.signInResult = "getSignInIntent start~~~~~~~~~";
