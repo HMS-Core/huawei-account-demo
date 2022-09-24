@@ -10,7 +10,6 @@ export default {
     },
     signIn() {
         this.signInResult = "getSignInIntent start~~~~~~~~~";
-        console.log("****test kit_sdk_version is 60100300****");
         console.log("****getSignInIntent****");
         var signInOption = new HuaweiIdAuthParamsHelper().setAuthorizationCode().setAccessToken().setIdToken().setId().setProfile().build();
         console.log("****setAuthorizationCode****");
