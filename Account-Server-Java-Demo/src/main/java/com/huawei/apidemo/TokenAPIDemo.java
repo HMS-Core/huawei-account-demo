@@ -62,7 +62,7 @@ public class TokenAPIDemo {
         //By requesting the following URL to get code returned by the user to confirm the authorization
         // (url:https://oauth-login.cloud.huawei.com/oauth2/v3/authorize?response_type=code&access_type=offline&state=state_parameter_passthrough_value&client_id=101484061&redirect_uri=hms://redirect_url&scope=openid+profile)
         String code = "CV4e3VYs22cDEVydKG7KlKbz4UrU1G78V9f7i4wqMzjzQ4lcYa90XRw37fWrYoPz8L%2B%2BqH8QHZW82bsPQ3eSPrdpF585YrXsNR%2BcuEKGKKlalq6ref5%2FX7V2%2BZzwIF0yUrRwmxqHoM4kpj4kcGZ0rTrpOy7xG4%2B41rpEdF7tZPod0WeDkSTv0gDWWq%2B64%2BAFyxDv17gDsm0%3D";
-        // If the code is encoded by urlEncode once (eg. the value of the the preceding code ), please run the following to urlDecode once. 
+        // If the code is obtained through the SDK, please ignore the following URLDecode code, Otherwise if the code is obtained through the web(eg. the value of the the preceding code ), please perform the following urlDecode operation. 
        code = java.net.URLDecoder.decode(code,   "utf-8");
 
         JSONObject tokens = getTokenByCode(redirect_uri, urlToken, code, client_secret, client_id, grant_type);
