@@ -1,0 +1,12 @@
+{
+  "color": [
+    {
+      "name": "start_window_background",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "hwid_login_button_background",
+      "value": "#CE0E2D"
+    }
+  ]
+}

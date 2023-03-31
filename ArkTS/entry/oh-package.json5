@@ -1,0 +1,14 @@
+{
+  "license": "ISC",
+  "devDependencies": {
+    "@ohos/hypium": "1.0.6-rc5"
+  },
+  "name": "entry",
+  "description": "example description",
+  "repository": {},
+  "version": "1.0.0",
+  "dependencies": {
+    "@hms-core/account": "6.10.1-300",
+    "@hms-core/framework-base-ohos": "6.10.2-300"
+  }
+}
