@@ -101,6 +101,11 @@ public class AccountActivity extends LoggerActivity implements OnClickListener {
      * sign Out by signOut
      */
     private void signOut() {
+        mAuthParam = new AccountAuthParamsHelper(AccountAuthParams.DEFAULT_AUTH_REQUEST_PARAM)
+                .setIdToken()
+                .setAccessToken()
+                .createParams();
+        mAuthManager = AccountAuthManager.getService(AccountActivity.this, mAuthParam);
         Task<Void> signOutTask = mAuthManager.signOut();
         signOutTask.addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
@@ -120,6 +125,11 @@ public class AccountActivity extends LoggerActivity implements OnClickListener {
      * Silent SignIn by silentSignIn
      */
     private void silentSignIn() {
+        mAuthParam = new AccountAuthParamsHelper(AccountAuthParams.DEFAULT_AUTH_REQUEST_PARAM)
+                .setIdToken()
+                .setAccessToken()
+                .createParams();
+        mAuthManager = AccountAuthManager.getService(AccountActivity.this, mAuthParam);
         Task<AuthAccount> task = mAuthManager.silentSignIn();
         task.addOnSuccessListener(new OnSuccessListener<AuthAccount>() {
             @Override
