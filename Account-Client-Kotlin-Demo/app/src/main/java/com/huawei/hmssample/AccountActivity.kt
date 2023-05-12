@@ -85,6 +85,11 @@ class AccountActivity : LoggerActivity() {
      * sign Out by signOut
      */
     private fun signOut() {
+        mAuthParam = AccountAuthParamsHelper(AccountAuthParams.DEFAULT_AUTH_REQUEST_PARAM)
+                .setIdToken()
+                .setAccessToken()
+                .createParams()
+        mAuthManager = AccountAuthManager.getService(this@AccountActivity, mAuthParam)
         val signOutTask = mAuthManager?.signOut()
         signOutTask?.addOnSuccessListener {
             Log.i(TAG, "signOut Success")
@@ -98,6 +103,11 @@ class AccountActivity : LoggerActivity() {
      * Silent SignIn by silentSignIn
      */
     private fun silentSignIn() {
+        mAuthParam = AccountAuthParamsHelper(AccountAuthParams.DEFAULT_AUTH_REQUEST_PARAM)
+                .setIdToken()
+                .setAccessToken()
+                .createParams()
+        mAuthManager = AccountAuthManager.getService(this@AccountActivity, mAuthParam)
         val task = mAuthManager?.silentSignIn()
         task?.addOnSuccessListener { Log.i(TAG, "silentSignIn success") }
         task?.addOnFailureListener { e ->
