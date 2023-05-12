@@ -10,16 +10,12 @@
 
     <!-- To upgrade the HMS using HMS-SDK, you need the network permission to access the OTA server. -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <!-- When the HMS-SDK boots the HMS upgrade function, the write permission on the SD card is required for saving the downloaded upgrade package. -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <!-- Check the network status. -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <!-- Check the Wi-Fi status. -->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <!-- For Android 8.0, if targetSdkVersion is set to 26 or later, add the following permissions -->
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
-    <!-- AppGallery 9.0 must use this permission to obtain users' service locations. -->
-    <uses-permission android:name="com.huawei.appmarket.service.commondata.permission.GET_COMMON_DATA" />
 
     <application
         android:allowBackup="true"
