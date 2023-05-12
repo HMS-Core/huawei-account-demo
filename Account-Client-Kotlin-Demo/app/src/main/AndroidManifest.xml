@@ -7,8 +7,6 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <!--check wifi state-->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <!--check phone state-->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <!--if your app is running above android 8.0 and use "targetSdkVersion>=26, need add permission -->
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
