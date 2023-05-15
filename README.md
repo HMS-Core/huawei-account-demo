@@ -28,7 +28,7 @@ Account login authorization, silent login, silent login failure processing, acco
 
 ## Installation
 
-To use the functions in this sample code, ensure that Huawei Mobile Service (HMS Core) 5.0 has been installed on your device.
+To use the functions in this sample code, ensure that Huawei Mobile Service (HMS Core) has been installed on your device.
 
 ## Environment Requirements
 
