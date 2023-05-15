@@ -1,48 +1,48 @@
-# ÒÆ¶¯ÓëÖÇ»ÛÆÁÓ¦ÓÃ¿ìËÙ½ÓÈë»ªÎªÕÊºÅÊ¾Àı´úÂë
+# ç§»åŠ¨ä¸æ™ºæ…§å±åº”ç”¨å¿«é€Ÿæ¥å…¥åä¸ºå¸å·ç¤ºä¾‹ä»£ç 
 
-ÖĞÎÄ | [English](https://github.com/HMS-Core/huawei-account-demo/blob/android_quickstart_scenarios/README.md) 
+ä¸­æ–‡ | [English](https://github.com/HMS-Core/huawei-account-demo/blob/android_quickstart_scenarios/README.md) 
 
-## Ä¿Â¼
-* [¼ò½é](#¼ò½é)
-* [°²×°](#°²×°)
-* [»·¾³ÒªÇó](#»·¾³ÒªÇó)
-* [ÅäÖÃ](#ÅäÖÃ)
-* [Ê¾Àı´úÂë](#Ê¾Àı´úÂë)
-* [ÔËĞĞ½á¹û](#ÔËĞĞ½á¹û)
-* [ÊÚÈ¨Ğí¿É](#ÊÚÈ¨Ğí¿É)
+## ç›®å½•
+* [ç®€ä»‹](#ç®€ä»‹)
+* [å®‰è£…](#å®‰è£…)
+* [ç¯å¢ƒè¦æ±‚](#ç¯å¢ƒè¦æ±‚)
+* [é…ç½®](#é…ç½®)
+* [ç¤ºä¾‹ä»£ç ](#ç¤ºä¾‹ä»£ç )
+* [è¿è¡Œç»“æœ](#è¿è¡Œç»“æœ)
+* [æˆæƒè®¸å¯](#æˆæƒè®¸å¯)
 
-## ¼ò½é
-Android_QuickStart_Scenarios_DemoÊ¾Àı´úÂë¶Ô»ªÎªÕÊºÅ·şÎñ£¨HUAWEI Account Kit£©³£ÓÃ½Ó¿ÚÔÚ¸Ã³¡¾°ÏÂµÄÊ¹ÓÃÌá¹©ÁË´úÂëÑùÀı£¬·½±ãÄú²Î¿¼»òÖ±½ÓÊ¹ÓÃ¡£ÏêÇéÈçÏÂ£º
-Ê¾Àı´úÂë°ü£¬¿ÉÊµÏÖµÇÂ¼¡¢¾²Ä¬µÇÂ¼ºÍÍË³öÕÊºÅ¡¢È¡ÏûÊÚÈ¨¹¦ÄÜ¡£
+## ç®€ä»‹
+Android_QuickStart_Scenarios_Demoç¤ºä¾‹ä»£ç å¯¹åä¸ºå¸å·æœåŠ¡ï¼ˆHUAWEI Account Kitï¼‰å¸¸ç”¨æ¥å£åœ¨è¯¥åœºæ™¯ä¸‹çš„ä½¿ç”¨æä¾›äº†ä»£ç æ ·ä¾‹ï¼Œæ–¹ä¾¿æ‚¨å‚è€ƒæˆ–ç›´æ¥ä½¿ç”¨ã€‚è¯¦æƒ…å¦‚ä¸‹ï¼š
+ç¤ºä¾‹ä»£ç åŒ…ï¼Œå¯å®ç°ç™»å½•ã€é™é»˜ç™»å½•å’Œé€€å‡ºå¸å·ã€å–æ¶ˆæˆæƒåŠŸèƒ½ã€‚
 
-## °²×°
-ÈçĞèÊ¹ÓÃ±¾Ê¾Àı´úÂëÖĞµÄ¸÷ÖÖ¹¦ÄÜ£¬ÇëÈ·±£ÄúµÄÉè±¸ÉÏÒÑ°²×°»ªÎªÒÆ¶¯·şÎñ£¨HMS Core£©5.0¡£
-## »·¾³ÒªÇó
-ÍÆ¼öÊ¹ÓÃAndroid SDK 23¼°ÒÔÉÏ°æ±¾¡¢JDK 1.8¼°ÒÔÉÏ°æ±¾¡£
+## å®‰è£…
+å¦‚éœ€ä½¿ç”¨æœ¬ç¤ºä¾‹ä»£ç ä¸­çš„å„ç§åŠŸèƒ½ï¼Œè¯·ç¡®ä¿æ‚¨çš„è®¾å¤‡ä¸Šå·²å®‰è£…åä¸ºç§»åŠ¨æœåŠ¡ï¼ˆHMS Coreï¼‰ã€‚
+## ç¯å¢ƒè¦æ±‚
+æ¨èä½¿ç”¨Android SDK 23åŠä»¥ä¸Šç‰ˆæœ¬ã€JDK 1.8åŠä»¥ä¸Šç‰ˆæœ¬ã€‚
 
-## ÅäÖÃ
+## é…ç½®
 
-1¡¢ÄúĞè½«DemoÖĞµÄpackagename¡¢AppIdµÈĞÅÏ¢»»³ÉÄúÔÚ¿ª·¢ÕßÁªÃËÉÏ´´½¨µÄÓ¦ÓÃĞÅÏ¢
+1ã€æ‚¨éœ€å°†Demoä¸­çš„packagenameã€AppIdç­‰ä¿¡æ¯æ¢æˆæ‚¨åœ¨å¼€å‘è€…è”ç›Ÿä¸Šåˆ›å»ºçš„åº”ç”¨ä¿¡æ¯
 
-2¡¢½«Äú´´½¨µÄÓ¦ÓÃµÄagconnect-services.jsonÎÄ¼şÏÂÔØÖÁ¹¤³ÌÄ¿Â¼¶ÔÓ¦Î»ÖÃ
+2ã€å°†æ‚¨åˆ›å»ºçš„åº”ç”¨çš„agconnect-services.jsonæ–‡ä»¶ä¸‹è½½è‡³å·¥ç¨‹ç›®å½•å¯¹åº”ä½ç½®
 
-## Ê¾Àı´úÂë
-¿ìËÙ½ÓÈë»ªÎªÕÊºÅ³¡¾°µÄ¿Í»§¶ËJavaÊ¾Àı´úÂëÌá¹©ÁËÒÔÏÂÊ¹ÓÃ³¡¾°£º
-1. µÇÂ¼ÊÚÈ¨
-2. ¾²Ä¬µÇÂ¼
-3. »ñÈ¡ÓÃ»§id(openid¡¢unionid)¡¢email¡¢profile£¨êÇ³Æ¡¢Í·Ïñ£©µÈ
-4. ÍË³öÕÊºÅ¡£
-5. ÕÊºÅÈ¡ÏûÊÚÈ¨
+## ç¤ºä¾‹ä»£ç 
+å¿«é€Ÿæ¥å…¥åä¸ºå¸å·åœºæ™¯çš„å®¢æˆ·ç«¯Javaç¤ºä¾‹ä»£ç æä¾›äº†ä»¥ä¸‹ä½¿ç”¨åœºæ™¯ï¼š
+1. ç™»å½•æˆæƒ
+2. é™é»˜ç™»å½•
+3. è·å–ç”¨æˆ·id(openidã€unionid)ã€emailã€profileï¼ˆæ˜µç§°ã€å¤´åƒï¼‰ç­‰
+4. é€€å‡ºå¸å·ã€‚
+5. å¸å·å–æ¶ˆæˆæƒ
 
-## ÔËĞĞ½á¹û
-demoÔËĞĞ×îºó»ñÈ¡µ½ÓÃ»§id(openid¡¢unionid)¡¢email¡¢profile£¨êÇ³Æ¡¢Í·Ïñ£©µÈ¡£
+## è¿è¡Œç»“æœ
+demoè¿è¡Œæœ€åè·å–åˆ°ç”¨æˆ·id(openidã€unionid)ã€emailã€profileï¼ˆæ˜µç§°ã€å¤´åƒï¼‰ç­‰ã€‚
 
-## ¸ü¶àÏêÇé
-ÈçĞèÁË½â¸ü¶àHMS CoreÏà¹ØĞÅÏ¢£¬ÇëÇ°Íù[Reddit](https://www.reddit.com/r/HuaweiDevelopers/)ÉçÇø»ñÈ¡HMS Core×îĞÂ×ÊÑ¶£¬²ÎÓë¿ª·¢ÕßÌÖÂÛ¡£
-ÈçÄú¶ÔÊ¾Àı´úÂëÊ¹ÓÃÓĞÒÉÎÊ£¬ÇëÇ°Íù£º
-* [Stack Overflow](https://stackoverflow.com/questions/tagged/huawei-mobile-services)ÌáÎÊ£¬ÉÏ´«ÎÊÌâÊ±Çë´òÉÏhuawei-mobile-services±êÇ©¡£
-* [»ªÎª¿ª·¢ÕßÂÛÌ³](https://developer.huawei.com/consumer/cn/forum/block/hms-core)£¬»ñµÃ¸ü¶àÒâ¼ûÓë½¨Òé¡£
-ÈçÄúÔÚÔËĞĞÊ¾Àı´úÂëÊ±³öÏÖ´íÎó£¬Çëµ½GitHubÌá½»[issue](https://github.com/HMS-Core/huawei-account-demo/issues)»ò[pull request](https://github.com/HMS-Core/huawei-account-demo/pulls)¡£
+## æ›´å¤šè¯¦æƒ…
+å¦‚éœ€äº†è§£æ›´å¤šHMS Coreç›¸å…³ä¿¡æ¯ï¼Œè¯·å‰å¾€[Reddit](https://www.reddit.com/r/HuaweiDevelopers/)ç¤¾åŒºè·å–HMS Coreæœ€æ–°èµ„è®¯ï¼Œå‚ä¸å¼€å‘è€…è®¨è®ºã€‚
+å¦‚æ‚¨å¯¹ç¤ºä¾‹ä»£ç ä½¿ç”¨æœ‰ç–‘é—®ï¼Œè¯·å‰å¾€ï¼š
+* [Stack Overflow](https://stackoverflow.com/questions/tagged/huawei-mobile-services)æé—®ï¼Œä¸Šä¼ é—®é¢˜æ—¶è¯·æ‰“ä¸Šhuawei-mobile-servicesæ ‡ç­¾ã€‚
+* [åä¸ºå¼€å‘è€…è®ºå›](https://developer.huawei.com/consumer/cn/forum/block/hms-core)ï¼Œè·å¾—æ›´å¤šæ„è§ä¸å»ºè®®ã€‚
+å¦‚æ‚¨åœ¨è¿è¡Œç¤ºä¾‹ä»£ç æ—¶å‡ºç°é”™è¯¯ï¼Œè¯·åˆ°GitHubæäº¤[issue](https://github.com/HMS-Core/huawei-account-demo/issues)æˆ–[pull request](https://github.com/HMS-Core/huawei-account-demo/pulls)ã€‚
 
-## ÊÚÈ¨Ğí¿É
-Android_QuickStart_Scenarios_DemoÊ¾Àı´úÂë¾­¹ı[Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)ÊÚÈ¨Ğí¿É¡£
+## æˆæƒè®¸å¯
+Android_QuickStart_Scenarios_Demoç¤ºä¾‹ä»£ç ç»è¿‡[Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)æˆæƒè®¸å¯ã€‚
