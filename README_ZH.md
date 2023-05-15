@@ -1,62 +1,62 @@
-# �ƶ����ǻ���Ӧ�ó��������뻪Ϊ�ʺ�ʾ������
+# 移动与智慧屏应用场景化接入华为帐号示例代码
 
-���� | [English](https://github.com/HMS-Core/huawei-account-demo/blob/android_code_scenarios/README.md)
+中文 | [English](https://github.com/HMS-Core/huawei-account-demo/blob/android_code_scenarios/README.md)
 
-## Ŀ¼
+## 目录
 
-* [���](#���)
-* [��װ](#��װ)
-* [����Ҫ��](#����Ҫ��)
-* [����](#����)
-* [ʾ������](#ʾ������)
-* [���н��](#���н��)
-* [��Ȩ����](#��Ȩ����)
+* [简介](#简介)
+* [安装](#安装)
+* [环境要求](#环境要求)
+* [配置](#配置)
+* [示例代码](#示例代码)
+* [运行结果](#运行结果)
+* [授权许可](#授权许可)
 
-## ���
+## 简介
 
-�ƶ����ǻ���Ӧ�ó��������뻪Ϊ�ʺ�ʾ������Ի�Ϊ�ʺŷ���HUAWEI Account Kit�����ýӿ��ڲ�ͬ�����µ�ʹ���ṩ�˴����������������ο���ֱ��ʹ�á�
+移动与智慧屏应用场景化接入华为帐号示例代码对华为帐号服务（HUAWEI Account Kit）常用接口在不同场景下的使用提供了代码样例，方便您参考或直接使用。
 
-����������
-1. �ƶ����ǻ���Ӧ�ÿ��ٽ��뻪Ϊ�ʺš�
-2. �ƶ����ǻ���Ӧ���޷�����ID-Tokenģʽ���뻪Ϊ�ʺš�
-3. �ƶ����ǻ���Ӧ���з�����ID-Tokenģʽ���뻪Ϊ�ʺš�
-4. �ƶ����ǻ���Ӧ��Codeģʽ���뻪Ϊ�ʺ�
+场景包含：
+1. 移动与智慧屏应用快速接入华为帐号。
+2. 移动与智慧屏应用无服务器ID-Token模式接入华为帐号。
+3. 移动与智慧屏应用有服务器ID-Token模式接入华为帐号。
+4. 移动与智慧屏应用Code模式接入华为帐号
 
-ʵ�ֵĽӿڼ��߼���
-�ʺŵ�¼��Ȩ����Ĭ��¼����Ĭ��¼ʧ�ܴ������˳��ʺš�ȡ����Ȩ���ܡ�
+实现的接口及逻辑：
+帐号登录授权、静默登录、静默登录失败处理、退出帐号、取消授权功能。
 
-## ��װ
+## 安装
 
-����ʹ�ñ�ʾ�������еĸ��ֹ��ܣ���ȷ�������豸���Ѱ�װ��Ϊ�ƶ�����HMS Core��5.0��
+如需使用本示例代码中的各种功能，请确保您的设备上已安装华为移动服务（HMS Core）。
 
-## ����Ҫ��
+## 环境要求
 
-�Ƽ�ʹ��Android SDK 23�����ϰ汾��JDK 1.8�����ϰ汾��
+推荐使用Android SDK 23及以上版本、JDK 1.8及以上版本。
 
-## ����
+## 配置
 
-## ʾ������
+## 示例代码
 
-�ƶ����ǻ���Ӧ�ó��������뻪Ϊ�ʺ�ʾ������ͻ���ʾ�������ṩ�������������룺
+移动与智慧屏应用场景化接入华为帐号示例代码客户端示例代码提供了以下样例代码：
 
-1. �ƶ����ǻ���Ӧ�ÿ��ٽ��뻪Ϊ�ʺţ���ȡ�û��ǳơ�ͷ��Email��UnionID��OpenID��
-2. �ƶ����ǻ���Ӧ���޷�����ID-Tokenģʽ���뻪Ϊ�ʺţ���ȡID-Token���ڱ���У��ID-Token��
-3. �ƶ����ǻ���Ӧ���з�����ID-Tokenģʽ���뻪Ϊ�ʺţ���ȡID-Token��
-4. �ƶ����ǻ���Ӧ��Codeģʽ���뻪Ϊ�ʺţ���ȡCode��
+1. 移动与智慧屏应用快速接入华为帐号，获取用户昵称、头像、Email、UnionID、OpenID。
+2. 移动与智慧屏应用无服务器ID-Token模式接入华为帐号，获取ID-Token并在本地校验ID-Token。
+3. 移动与智慧屏应用有服务器ID-Token模式接入华为帐号，获取ID-Token。
+4. 移动与智慧屏应用Code模式接入华为帐号，获取Code。
 
-## ���н��
+## 运行结果
 
-ʾ�������е����Ϊ�ʺŵ�¼��ť������Ϊ�ʺŵ�¼��Ȩҳ�棬����ȡ�û���Ϣ������ʺ��˳���������桢���ȡ����Ȩ��ť��ȡ��Ӧ����Ȩ�ȡ�
+示例代码中点击华为帐号登录按钮将拉起华为帐号登录授权页面，并获取用户信息，点击帐号退出将清除缓存、点击取消授权按钮将取消应用授权等。
 
-## ��������
+## 更多详情
 
-�����˽����HMS Core�����Ϣ����ǰ��[Reddit](https://www.reddit.com/r/HuaweiDevelopers/)������ȡHMS Core������Ѷ�����뿪�������ۡ�
-������ʾ������ʹ�������ʣ���ǰ����
+如需了解更多HMS Core相关信息，请前往[Reddit](https://www.reddit.com/r/HuaweiDevelopers/)社区获取HMS Core最新资讯，参与开发者讨论。
+如您对示例代码使用有疑问，请前往：
 
-* [Stack Overflow](https://stackoverflow.com/questions/tagged/huawei-mobile-services)���ʣ��ϴ�����ʱ�����huawei-mobile-services��ǩ��
-* [��Ϊ��������̳](https://developer.huawei.com/consumer/cn/forum/block/hms-core)����ø�������뽨�顣
-  ����������ʾ������ʱ���ִ����뵽GitHub�ύ[issue](https://github.com/HMS-Core/huawei-account-demo/issues)��[pull request](https://github.com/HMS-Core/huawei-account-demo/pulls)��
+* [Stack Overflow](https://stackoverflow.com/questions/tagged/huawei-mobile-services)提问，上传问题时请打上huawei-mobile-services标签。
+* [华为开发者论坛](https://developer.huawei.com/consumer/cn/forum/block/hms-core)，获得更多意见与建议。
+  如您在运行示例代码时出现错误，请到GitHub提交[issue](https://github.com/HMS-Core/huawei-account-demo/issues)或[pull request](https://github.com/HMS-Core/huawei-account-demo/pulls)。
 
-## ��Ȩ����
+## 授权许可
 
-�ƶ����ǻ���Ӧ�ó��������뻪Ϊ�ʺ�ʾ�����뾭��[Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)��Ȩ���ɡ�
+移动与智慧屏应用场景化接入华为帐号示例代码经过[Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)授权许可。
