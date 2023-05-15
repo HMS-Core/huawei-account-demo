@@ -20,7 +20,7 @@ The following describes of Android_QuickStart_Scenarios_Demo.
 quickstartdemo: Sample code packages. This package  contains code that implements SignIn,  SilentSignIn and SignOut.
 
 ## Installation
-To use functions provided by examples, please make sure Huawei Mobile Service 5.0 has been installed on your cellphone.
+To use functions provided by examples, please make sure Huawei Mobile Service has been installed on your cellphone.
 ## Supported Environments
 Android SDK Version >= 23 and JDK version >= 1.8 is recommended.
 	
