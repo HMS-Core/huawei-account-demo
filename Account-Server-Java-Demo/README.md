@@ -42,6 +42,7 @@ The sample code shows how to implement the following functions:
 1. Use the authorization code to obtain the access token in **TokenAPIDemo.java**.
 2. Use the public key to verify the ID token in **IDTokenAPIDemo.java**.
 3. Parse the access token in **GetTokenInfoAPIDemo.java**.
+4. Parse and verify the ID token locally in **IDTokenParser.java**.
 
 ##  **License**
 The sample code is licensed under [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0).
