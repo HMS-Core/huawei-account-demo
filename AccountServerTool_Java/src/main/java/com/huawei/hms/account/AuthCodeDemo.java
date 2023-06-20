@@ -38,11 +38,11 @@ public class AuthCodeDemo {
     /**
      * your app id
      */
-    private static final String appId = "104368933";
+    private static final String appId = "10436***3";
     /**
      * your app secret
      */
-    private static final String appSecret = "60074632c6c035878784e5dc00106f956cdcb652136b658bff71d5910ba5d31d";
+    private static final String appSecret = "600746***8784e5dc00106f956cdcb652136b658bff71d5910ba5d31d";
     /**
      * your redirect uri
      */
@@ -60,7 +60,7 @@ public class AuthCodeDemo {
         /**
          * your code get from client
          */
-        String code = "DQB6e3x9w0zYd9jsctUU2NJkqowd5PrTEWKe4i7hNPSiZKZKjZFXm+UvGPJ1Pephy9UulKDhXbkz6omXzzMJFduZ7YTtfmQhd/iR1Q+bVr5b5BV63KyD3yJm3+74TaKOaFVh7yRRLi79m+BxUjhisdhHb2oZVMbO/jy7lvKdlvSwFDA7/DAn2GGEbKID2AGAeJw9ZztEXTEXiX4jbYpygOLwZIY4tsS9uVHCF9XrULinLKH89Zjd6f5o54suYpTP4FAdBAPTr2cA9n6UOQE3cCxFz/lZnRoDlifoK17psHOI1ojqdjji6AiKKz1EbPZEDJ7dulLa3S0q7xTygnXg95R9qowdskX2p6V7+tmKkQhBnCT137F6/2OAng==";
+        String code = "DQB6e3x***rTEWKe4i7hNPSiZKZKjZFXm+UvGPJ1Pephy9UulKDhXbkz6omXzzMJFduZ7YTtfmQhd/iR1Q+bVr5b5BV63KyD3yJm3+74TaKOaFVh7yRRLi79m+BxUjhisdhHb2oZVMbO/jy7lvKdlvSwFDA7/DAn2GGEbKID2AGAeJw9ZztEXTEXiX4jbYpygOLwZIY4tsS9uVHCF9XrULinLKH89Zjd6f5o54suYpTP4FAdBAPTr2cA9n6UOQE3cCxFz/lZnRoDlifoK17psHOI1ojqdjji6AiKKz1EbPZEDJ7dulLa3S0q7xTygnXg95R9qowdskX2p6V7+tmKkQhBnCT137F6/2OAng==";
         getAccessToken(code, appId, appSecret, redirectUri);
         getUserInfos(getNickName);
     }
