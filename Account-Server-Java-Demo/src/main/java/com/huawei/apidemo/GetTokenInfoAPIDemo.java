@@ -48,7 +48,7 @@ public class GetTokenInfoAPIDemo {
         String urlScope = "https://oauth-api.cloud.huawei.com/rest.php";
 
         //<please update> access token which server have got.
-        String accessToken = "CV4e6lKIn6xJiO9Nz1xIqWj8FY0DYmt/wiPXGJbvlDrBq4hOWlFbygdDoMg0htDm0LdlPIrRwAihXFGADOMkddmzhiE01R+99Y71hx/yfzuDb5njDT9bDg==";
+        String accessToken = "CV4e6lKI***Ymt/wiPXGJbvlDrBq4hOWlFbygdDoMg0htDm0LdlPIrRwAihXFGADOMkddmzhiE01R+99Y71hx/yfzuDb5njDT9bDg==";
 
         JSONObject tokenInfo = getClientTokenInfo(accessToken, urlScope);
         System.out.println("the output of huawei.oauth2.user.getTokenInfo is : \n" + tokenInfo.toJSONString());
