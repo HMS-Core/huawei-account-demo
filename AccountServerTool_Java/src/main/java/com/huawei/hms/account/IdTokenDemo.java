@@ -33,7 +33,7 @@ public class IdTokenDemo {
 		/**
         * your app id
         */
-		String appId = "104114183";
+		String appId = "104***83";
 		
         String userInfos = IdTokenUtil.getUserInfosByIdToken(idToken, appId);
         if (userInfos == null) {
