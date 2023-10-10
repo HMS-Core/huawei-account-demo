@@ -54,11 +54,12 @@ public class IDTokenAPIDemo {
     }
 
     private static JSONObject getDetailByIDToken(String urlTokenInfo, String idToken) throws IOException {
-        StringBuilder stringBuilder = new StringBuilder("");
-        stringBuilder.append("id_token=").append(URLEncoder.encode(idToken, "UTF-8"));
+        HttpPost httpPost = new HttpPost(urlTokenInfo);
+        List<NameValuePair> request = new ArrayList<>();
+        request.add(new BasicNameValuePair("id_token", idToken));
+        httpPost.setEntity(new UrlEncodedFormEntity(request));
 
-        HttpGet httpGet = new HttpGet(urlTokenInfo + "?" + stringBuilder);
-        CloseableHttpResponse response = getClient().execute(httpGet);
+        CloseableHttpResponse response = getClient().execute(httpPost);
 
         try {
             HttpEntity responseEntity = response.getEntity();
