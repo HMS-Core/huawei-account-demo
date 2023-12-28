@@ -265,16 +265,16 @@ containing a value of this type.
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f080002;
-        /** 按钮样式 
+        /** Button Style 
          */
         public static final int ButtonStyle=0x7f080004;
-        /** 输入框样式 
+        /** Text box style 
          */
         public static final int EditTextStyle=0x7f080006;
-        /** title样式 
+        /** title Style 
          */
         public static final int TitleStyle=0x7f080005;
-        /** 提示样式 
+        /** Prompt Style 
          */
         public static final int WarningStyle=0x7f080007;
         public static final int buoy_loading_activity_style=0x7f080003;

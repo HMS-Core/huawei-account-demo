@@ -23,7 +23,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import android.util.Base64;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -38,6 +37,7 @@ import com.auth0.jwt.interfaces.DecodedJWT;
 import com.huawei.hmssample.ICallBack;
 import com.huawei.logger.Log;
 
+import android.util.Base64;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.OkHttpClient;
@@ -89,7 +89,7 @@ public class IDTokenParser {
                 try {
                     Algorithm algorithm = Algorithm.RSA256(mRSAPublicKey , null);
                     JWTVerifier verifier = JWT.require(algorithm).build();
-                    JSONObject jsonObject = new JSONObject(new String(Base64.decode(decoder.getPayload(), Base64.URL_SAFE),Charset.forName("UTF-8")));
+                    JSONObject jsonObject = new JSONObject(new String(Base64.decode(decoder.getPayload(), Base64.URL_SAFE),"UTF-8"));
                     // Verify the value of iss
                     if (!decoder.getIssuer().equals(HuaweiIdActivity.urlMap.get("ID_TOKEN_ISSUE"))) {
                         callBack.onFailed();

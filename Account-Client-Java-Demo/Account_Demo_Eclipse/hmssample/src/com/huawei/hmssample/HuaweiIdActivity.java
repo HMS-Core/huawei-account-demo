@@ -121,7 +121,7 @@ public class HuaweiIdActivity extends LoggerActivity implements OnClickListener 
      * sign Out by signOut
      */
     private void signOut() {
-    mAuthParam = new HuaweiIdAuthParamsHelper(HuaweiIdAuthParams.DEFAULT_AUTH_REQUEST_PARAM)
+		mAuthParam = new HuaweiIdAuthParamsHelper(HuaweiIdAuthParams.DEFAULT_AUTH_REQUEST_PARAM)
                 .setIdToken()
                 .setAccessToken()
                 .createParams();
@@ -182,7 +182,7 @@ public class HuaweiIdActivity extends LoggerActivity implements OnClickListener 
      * Silent SignIn by silentSignIn
      */
     private void silentSignIn() {
-    mAuthParam = new HuaweiIdAuthParamsHelper(HuaweiIdAuthParams.DEFAULT_AUTH_REQUEST_PARAM)
+		mAuthParam = new HuaweiIdAuthParamsHelper(HuaweiIdAuthParams.DEFAULT_AUTH_REQUEST_PARAM)
                 .setIdToken()
                 .setAccessToken()
                 .createParams();
