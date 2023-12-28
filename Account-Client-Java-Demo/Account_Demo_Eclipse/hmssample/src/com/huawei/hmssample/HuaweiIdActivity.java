@@ -121,11 +121,11 @@ public class HuaweiIdActivity extends LoggerActivity implements OnClickListener 
      * sign Out by signOut
      */
     private void signOut() {
-		mAuthParam = new AccountAuthParamsHelper(AccountAuthParams.DEFAULT_AUTH_REQUEST_PARAM)
+    mAuthParam = new HuaweiIdAuthParamsHelper(HuaweiIdAuthParams.DEFAULT_AUTH_REQUEST_PARAM)
                 .setIdToken()
                 .setAccessToken()
                 .createParams();
-        mAuthManager = AccountAuthManager.getService(AccountActivity.this, mAuthParam);
+        mAuthManager = HuaweiIdAuthManager.getService(HuaweiIdActivity.this, mAuthParam);
         Task<Void> signOutTask = mAuthManager.signOut();
         signOutTask.addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
@@ -182,11 +182,11 @@ public class HuaweiIdActivity extends LoggerActivity implements OnClickListener 
      * Silent SignIn by silentSignIn
      */
     private void silentSignIn() {
-		mAuthParam = new AccountAuthParamsHelper(AccountAuthParams.DEFAULT_AUTH_REQUEST_PARAM)
+    mAuthParam = new HuaweiIdAuthParamsHelper(HuaweiIdAuthParams.DEFAULT_AUTH_REQUEST_PARAM)
                 .setIdToken()
                 .setAccessToken()
                 .createParams();
-        mAuthManager = AccountAuthManager.getService(AccountActivity.this, mAuthParam);
+        mAuthManager = HuaweiIdAuthManager.getService(HuaweiIdActivity.this, mAuthParam);
         Task<AuthHuaweiId> task = mAuthManager.silentSignIn();
         task.addOnSuccessListener(new OnSuccessListener<AuthHuaweiId>() {
             @Override
