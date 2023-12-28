@@ -108,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
 		mAuthParam = new AccountAuthParamsHelper(AccountAuthParams.DEFAULT_AUTH_REQUEST_PARAM)
 				.setEmail()
 				.setAuthorizationCode()
+			        .setCarrierId()
 				.createParams();
 
 		// 使用请求参数构造华为帐号登录授权服务AccountAuthService
