@@ -39,6 +39,7 @@ ID_TOKEN_ISSUE：与ID Token的iss字段的值相同。
 2. 在IDTokenAPIDemo.java中，使用公钥验证ID Token。
 3. 在GetTokenInfoAPIDemo.java中，解析Access Token。
 4. 在IDTokenParser.java中，本地解析验证ID Token。
+5. 在JWTGenerateDemo.java中，基于Service Account本地生成JWT.
 
 ##  **授权许可**
 华为帐号服务服务端示例代码经过[Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)授权许可。
