@@ -43,6 +43,7 @@ The sample code shows how to implement the following functions:
 2. Use the public key to verify the ID token in **IDTokenAPIDemo.java**.
 3. Parse the access token in **GetTokenInfoAPIDemo.java**.
 4. Parse and verify the ID token locally in **IDTokenParser.java**.
+5. Generate a JWT locally based on the Service Account account in **JWTGenerateDemo.java**.
 
 ##  **License**
 The sample code is licensed under [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0).
