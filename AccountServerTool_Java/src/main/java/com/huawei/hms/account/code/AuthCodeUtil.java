@@ -228,8 +228,8 @@ public class AuthCodeUtil {
      * @return
      */
     private static CloseableHttpClient getClient() {
-        PoolingHttpClientConnectionManager connectionManager = buildConnectionManager("TLSv1.2", new String[]{"TLSv1.2", "TLSv1.1"},
-                new String[]{"TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256", "TLS_DHE_RSA_WITH_AES_128_CBC_SHA256", "TLS_DHE_RSA_WITH_AES_128_CBC_SHA", "TLS_DHE_DSS_WITH_AES_128_CBC_SHA"});
+        PoolingHttpClientConnectionManager connectionManager = buildConnectionManager("TLSv1.2", new String[] { "TLSv1.2", "TLSv1.3" }, 
+                new String[] { "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256", "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384", "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256", "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384" });
         connectionManager.setMaxTotal(400);
         connectionManager.setDefaultMaxPerRoute(400);
         RequestConfig config =
