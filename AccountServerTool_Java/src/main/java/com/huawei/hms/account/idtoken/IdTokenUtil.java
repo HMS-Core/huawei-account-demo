@@ -13,7 +13,10 @@ Copyright 2020. Huawei Technologies Co., Ltd. All rights reserved.
    See the License for the specific language governing permissions and
    limitations under the License.
  */
+
 package com.huawei.hms.account.idtoken;
+
+import com.huawei.hms.account.common.HttpClientUtil;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
@@ -26,6 +29,7 @@ import com.auth0.jwt.exceptions.JWTDecodeException;
 import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.auth0.jwt.exceptions.TokenExpiredException;
 import com.auth0.jwt.interfaces.DecodedJWT;
+
 import org.apache.commons.codec.Charsets;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.http.HttpEntity;
@@ -33,7 +37,6 @@ import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -116,7 +119,6 @@ public class IdTokenUtil {
         }
     }
 
-
     /**
      * get the RSAPublicKey by kid
      * Please cache the RSAPublicKey
@@ -130,8 +132,9 @@ public class IdTokenUtil {
             return keyId2PublicKey.get(keyId);
         }
         JSONArray keys = getJwks();
-        if (keys == null)
+        if (keys == null) {
             return null;
+        }
         if (keyId2PublicKey.size() > MAX_PUBLIC_KEY_SIZE) {
             keyId2PublicKey.clear();
         }
@@ -170,13 +173,13 @@ public class IdTokenUtil {
      * @return JSONObject
      */
     private static JSONArray getJwks() {
-        CloseableHttpClient httpClient = HttpClients.createDefault();
+        CloseableHttpClient httpClient = HttpClientUtil.getClient();
         HttpGet httpGet = new HttpGet(CERT_URL);
         RequestConfig requestConfig = RequestConfig.custom()
-                .setConnectTimeout(5000)
-                .setConnectionRequestTimeout(5000)
-                .setSocketTimeout(5000)
-                .build();
+            .setConnectTimeout(5000)
+            .setConnectionRequestTimeout(5000)
+            .setSocketTimeout(5000)
+            .build();
         httpGet.setConfig(requestConfig);
         try {
             CloseableHttpResponse response = httpClient.execute(httpGet);
@@ -206,16 +209,8 @@ public class IdTokenUtil {
         additionalAttributes.put("e", jwkObject.getString("e"));
         List<String> operations = new ArrayList<String>();
         PublicKey publicKey = null;
-        Jwk jwk = new Jwk(
-                jwkObject.getString("kid"),
-                jwkObject.getString("kty"),
-                jwkObject.getString("alg"),
-                jwkObject.getString("use"),
-                operations,
-                null,
-                null,
-                null,
-                additionalAttributes);
+        Jwk jwk = new Jwk(jwkObject.getString("kid"), jwkObject.getString("kty"), jwkObject.getString("alg"),
+            jwkObject.getString("use"), operations, null, null, null, additionalAttributes);
         try {
             publicKey = jwk.getPublicKey();
         } catch (InvalidPublicKeyException e) {
