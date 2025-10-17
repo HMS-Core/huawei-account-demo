@@ -17,16 +17,18 @@ logger：可实现日志记录。
 
 ## 环境要求
 推荐使用Android SDK 23及以上版本、JDK 1.8及以上版本。
+推荐Android Studio中JDK环境与本地配置保持一致。
 
 ## 开发准备
 1. 检查Android Studio开发环境是否就绪。在Android Studio中打开“build.gradle”文件所在的示例代码工程目录，并在您已安装最新版华为移动服务（HMS Core）的设备或模拟器上运行测试应用。
 2. 注册[华为帐号](https://developer.huawei.com/consumer/cn/)。
 3. 创建应用并在AppGallery Connect中配置相关信息。具体请参考[开发准备](https://developer.huawei.com/consumer/cn/doc/development/HMSCore-Guides/config-agc-0000001050196065?ha_source=hms1)。
-4. 构建此示例demo前，请先将demo导入Android Studio（3.0及以上版本）。
+4. 构建此示例demo前，请先将demo导入Android Studio（Android Studio 2022.1.1及以上版本）。
 5. 配置示例代码：
      （1）在AppGallery Connect下载您应用的“agconnect-services.json”文件，将该文件拷贝到应用级根目录下。
      （2）修改示例工程中应用级“build.gradle”文件中的“applicationid”为您自己的应用包名。
-6. 在Android设备或模拟器上运行您的应用。
+     （3）AGC插件配置请您参见AGC插件依赖关系选择合适的AGC插件版本，AGC插件配套gradle版本不支持8.0及以上版本。详见[AGC插件依赖关系](https://developer.huawei.com/consumer/cn/doc/AppGallery-connect-Guides/agc-sdk-changenotes-0000001058732550#section7117746172220)。
+7. 在Android设备或模拟器上运行您的应用。
 
 ## 运行结果
 本示例代码提供了以下使用场景：
