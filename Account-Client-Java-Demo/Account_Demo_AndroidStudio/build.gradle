@@ -4,13 +4,16 @@ buildscript {
     repositories {
         // Codelab Configuration - HMS SDK
         maven { url 'https://developer.huawei.com/repo/' }
-        google()
-        jcenter()
+        maven { url 'https://maven.aliyun.com/nexus/content/repositories/google' }
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+//        google()
+//        jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.3'
+        classpath 'com.android.tools.build:gradle:4.2.2'
         // Codelab Configuration - agc plugin
-        classpath 'com.huawei.agconnect:agcp:1.4.2.300'
+        classpath 'com.huawei.agconnect:agcp:1.9.3.302'
     }
 }
 
@@ -18,8 +21,11 @@ allprojects {
     repositories {
         // Codelab Configuration - HMS SDK
         maven { url 'https://developer.huawei.com/repo/' }
-        google()
-        jcenter()
+        maven { url 'https://maven.aliyun.com/nexus/content/repositories/google' }
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+//        google()
+//        jcenter()
     }
 }
 
